@@ -25,7 +25,7 @@ Response You get
 
 The response will be a JSON object. If the POST status is success the verification request was successful, and NamSon has started the process. Once you've started a verification process, you can't verify the same number until the exsisting request expires. A successful verification request will include a originCountryIso2.
 {
-"firstName"	: "John" 
+"firstName"	: "John" <br>
 "id" "internationalPhoneNumberVerified"	: "+1 650-454-7093"
 "lastName" : "Doe"
 "originCountryIso2" : "IN"
