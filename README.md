@@ -24,8 +24,8 @@ This is your API key: "4ac7667457defcf5e4ebdaa6cb985e5d"
 
 <h3>Response You get</h1>
 
-The response will be a JSON object. If the POST status is success the verification request was successful, and NamSon has started the process. Once you've started a verification process, you can't verify the same number until the exsisting request expires. A successful verification request will include a originCountryIso2.
-<span style="color: chocolate; background: black;">
+The response will be a JSON object. If the POST status is success the verification request was successful, and NamSon has started the process. Once you've started a verification process, you can't verify the same number until the exsisting request expires. A successful verification request will include a originCountryIso2.<br>
+{
                             "firstName"	: "John" <br>
                             "id"	   
                             "internationalPhoneNumberVerified"	:   "+1 650-454-7093"<br>
@@ -39,4 +39,4 @@ The response will be a JSON object. If the POST status is success the verificati
                             "phoneNumber"                       :	"16504547093"<br>
                             "score"	                            :   "5.315358167289838"<br>
                             "verified"	                        :   "true"<br>
-                          </span>
+    }               
