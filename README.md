@@ -13,11 +13,11 @@ Whether you’re looking to build brand awareness or generate leads; we create a
 A verification process can be used to verify a user's phone number. The Verify API confirms that a user is in possession of a specific device based on a phone number. To start a verification process, you'll need the number to be verified, and your name so the recipient can identify .
 
 Be sure the number is in international format. Make a call to (https://v2.namsor.com/NamSorAPIv2/api2/json/phoneCode), /FirstName/LastName/Number with those parameters, along with your api_key and headers .
-
-httpOptions = {
-headers: new HttpHeaders 
-'Accept': 'application/json',
-'x-api-key': '4ac7667457defcf5e4ebdaa6cb985e5d'
+<br>
+httpOptions = {<br>
+headers: new HttpHeaders <br>
+'Accept': 'application/json',<br>
+'x-api-key': '4ac7667457defcf5e4ebdaa6cb985e5d'<br>
 }
 <br>
 Your format will be look like (https://v2.namsor.com/NamSorAPIv2/api2/json/phoneCode/John/Doe/+12123232117)<br>
