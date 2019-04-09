@@ -1,0 +1,780 @@
+
+<!-- banner strart -->
+
+<section class="xs-banner" id="home">
+    <div class="banner-slider owl-carousel">
+        <div class="single-banner-slide" style="background-image: url(assets/images/slider/slider-bg-1.jpg);">
+            <div class="container">
+                <div class="row">
+                    <div class="col-lg-6 align-self-center">
+                        <div class="xs-banner-content">
+                            <h2 class="banner-subtitle">Welcome to a place where,</h2>
+                            <h3 class="banner-title">Our API will guess the personal name's</h3>
+                            <h3 class="banner-title">country of origin</h3>
+                            <!-- <h2 class="banner-subtitle">Digital Marketing</h2> -->
+                               <div class="btn-wraper">
+                                    <a href="#" class="btn btn-secondary">Get started for free</a>
+                                </div>
+                        </div><!-- .xs-banner-content END -->
+                    </div>
+                    <div class="col-lg-6">
+                        <div class="banner-image image-one">
+
+
+
+                        </div><!-- .banner-image .image-one END -->
+                    </div>
+                </div><!-- .row END -->
+            </div><!-- .container END -->
+        </div><!-- .single-banner-slide END -->
+        <div class="single-banner-slide slide-two" style="background-image: url(assets/images/pricing/hdr.jpg);">
+            <div class="container">
+                <div class="row">
+                    <div class="col-lg-6">
+                       <!--  <div class="banner-image image-two">
+                            <img src="assets/images/slider/slider-image2.png" alt="">
+                        </div>.banner-image .image-one END -->
+                    </div>
+                    <div class="col-lg-6 align-self-center">
+                        <div class="xs-banner-content">
+                          
+                            <h3 class="banner-title">FREE PHONE VALIDATION</h3>
+                            <p>WORKS WITH NUMBERS FROM
+                                ALL U.S. PHONE CARRIERS</p>
+                            <div class="btn-wraper">
+                                <a href="#" class="btn btn-secondary">Get Started</a>
+                            </div>
+                        </div><!-- .xs-banner-content END -->
+                    </div>
+                </div><!-- .row END -->
+            </div><!-- .container END -->
+        </div><!-- .single-banner-slide .slide-two END -->
+        <div class="single-banner-slide" style="background-image: url(assets/images/pricing/hdr2.jpg);">
+            <div class="container">
+                <div class="row">
+                    <div class="col-lg-6 align-self-center">
+                        <div class="xs-banner-content">
+                         
+                            <h3 class="banner-title">Use Phone Validator</h3>
+                            <p>In real-time via API or Bulk for phone list validation</p>
+                            <div class="btn-wraper">
+                                <a href="#" class="btn btn-secondary">Get Started</a>
+                            </div>
+                        </div><!-- .xs-banner-content END -->
+                    </div>
+                    <div class="col-lg-6">
+                        <div class="banner-image image-three">
+                            <img src="assets/images/slider/slider-image3.png" alt="">
+                        </div><!-- .banner-image .image-one END -->
+                    </div>
+                </div><!-- .row END -->
+            </div><!-- .container END -->
+        </div><!-- .single-banner-slide END -->
+    </div><!-- .banner-slider .owl-carousel END -->
+</section><!-- end banner strart -->
+
+
+
+<!-- get free quote section -->
+<section class="primary-bg xs-section-padding free-quote-area" style="padding: 50px 0;" data-delighter="start:0.3" id="verify">
+    <div class="container">
+      <!-- .row END -->
+        <div class="row">
+            <div class="col-lg-7 mx-auto">
+   <div class="row">
+            <div class="col-lg-12 mx-auto">
+                    <div class="xs-heading text-center">
+                            <h2 class="section-subtitle">Ready to Check</h2>
+                            <h3 class="section-title ">Get your free number details</h3>
+                        </div><!-- .xs-heading END -->
+                <form [formGroup]="form" (ngSubmit)="register()" class="xs-inline-form">
+                    <div class="row no-gutters">
+                        <div class="col-lg-4">
+                            <input type="text" formControlName="fname" id="fname" placeholder="First-Name" class="form-control" style=" border-right: 0.5px solid lightsteelblue;">
+                            <div *ngIf="fname.touched && fname.invalid">
+                                <div *ngIf="fname.errors.required" style="color: white">First Name is required.</div>
+                            </div>
+                        </div>
+                        <div class="col-lg-4">
+                            <input type="text" formControlName="lname" id="lname" placeholder="Last-Name" class="form-control" style=" border-right: 0.5px solid lightsteelblue;">
+                            <div *ngIf="lname.touched && lname.invalid">
+                                <div *ngIf="lname.errors.required" style="color: white">Last Name is required.</div>
+                            </div>
+                        </div>
+                        <div class="col-lg-4">
+                            <input type="number" formControlName="number" id="number" placeholder="Phone-Number" class="form-control">
+                            <div *ngIf="number.touched && number.invalid" style="color: white">
+                                <div *ngIf="number.errors.required">Number is required.</div>
+                            </div>
+                        </div>
+                    </div>
+                    <input type="submit" name="submit" value="Check" class="check-btn">
+                </form>
+                <span *ngIf="iserror">
+                    <div class="error" style="color: black; font-size: 2em; font-family: cursive;">
+                        <p>Phone Couldn't be <span style="color: red;">Verified!</span></p>
+                    </div>
+                </span>
+            </div>
+        </div><!-- .row END -->
+            </div>
+            <div [ngClass]="{'hidden': pro, 'col-lg-5': true, 'mx-auto': true}" style="border-left: 2px solid white;">
+                    <div class="single-blog-post-thumb">
+                         
+                            <div class="post-body" style=" padding: 1em !important; padding-bottom: unset !important;">
+
+
+<!-- pricing section -->
+
+    
+       <!-- .row END -->
+        <div class="row">
+            <div class="col-md-12 xs-pricing-group">
+                <ul class="nav nav-tabs main-nav-tab tab-swipe" role="tablist" style="margin-bottom: 1em !important;">
+                    <li>
+                        <a id="formatted-tab" class="active show" data-toggle="tab" href="#formatted" role="tab" aria-controls="formatted" aria-selected="true">Formatted</a>
+                    </li>
+                    <li>
+                        <a id="json-tab" data-toggle="tab" href="#json" role="tab" aria-controls="json" aria-selected="false">JSON</a>
+                    </li>
+                </ul>
+                <div class="tab-content">
+                    <div class="tab-pane fadeIn animated show active" id="formatted" role="tabpanel" aria-labelledby="formatted-tab">
+                        <div class="row">
+                            
+                            
+                            <div class="col-lg-12 col-md-12">
+                                
+                            
+                                    <div class="pricing-body">
+                                    <!-- HERE START FORMATTED TABLE -->
+                                    <table class="table table-sm table-hover" style="margin-bottom: unset;">
+                                  
+                                        <tbody style="color: black;">
+                                            <tr><td><strong>Fields</strong></td><td><strong>Records</strong></td></tr>
+                                                   <tr>    <td scope="col">firstName</td> <td scope="col">{{resdata?.firstName || ""}}</td> </tr>
+                                                   <tr>    <td scope="col">id</td><td scope="col">{{resdata?.id || ""}}</td> </tr>
+                                                   <tr>   <td scope="col">internationalPhoneNumberVerified</td><td scope="col">{{resdata?.internationalPhoneNumberVerified || ""}}</td> </tr>
+                                                   <tr>      <td scope="col">lastName</td><td scope="col">{{resdata?.lastName || ""}}</td> </tr>
+                                                   <tr>    <td scope="col">originCountryIso2</td> <td scope="col">{{resdata?.originCountryIso2 || ""}}</td> </tr>
+                                                   <tr>   <td scope="col">originCountryIso2Alt</td> <td scope="col">{{resdata?.originCountryIso2Alt || ""}}</td> </tr>
+                                                   <tr>   <td scope="col">phoneCountryCode</td> <td scope="col">{{resdata?.phoneCountryCode || ""}}</td> </tr>
+                                                   <tr>  <td scope="col">phoneCountryIso2</td>  <td scope="col">{{resdata?.phoneCountryIso2 || ""}}</td> </tr>
+                                                   <tr>  <td scope="col">phoneCountryIso2Alt</td>  <td scope="col">{{resdata?.phoneCountryIso2Alt || ""}}</td> </tr>
+                                                   <tr>   <td scope="col">phoneCountryIso2Verified</td>  <td scope="col">{{resdata?.phoneCountryIso2Verified || ""}}</td> </tr>
+                                                   <tr>    <td scope="col">phoneNumber</td> <td scope="col">{{resdata?.phoneNumber || ""}}</td> </tr>
+                                                   <tr>    <td scope="col">score</td> <td scope="col">{{resdata?.score || ""}}</td> </tr>
+                                                   <tr>   <td scope="col">verified</td>  <td scope="col">{{resdata?.verified || ""}}</td>
+                                                </tr>
+                                      
+                                        </tbody>
+                                      </table> 
+
+                                <!-- HERE END FORMATTED TABLE -->    
+                                </div><!-- .pricing-body END -->
+                               
+                          
+                             <!-- .xs-single-pricing END -->
+                            </div>
+                         
+                           
+                        </div>
+                    </div><!-- #monthly END -->
+                    <div class="tab-pane fadeIn animated" id="json" role="tabpanel" aria-labelledby="json-tab">
+                        <div class="row">
+                           
+                            <div class="col-lg-12 col-md-12">
+                             
+                        
+                                    <div class="pricing-body">
+                                        <!-- HERE START FORMATTED TABLE -->
+                                        <div class="typography-group">
+
+
+                                            <div class="row">
+               
+
+                                                <div class="xs-heading style4 mb-5 col-md-12"> <!-- .mb-0 class only for demo -->
+                            
+                                              
+                            
+                                                      <p style="background: #1c2434f0; padding: 1em; color: chocolate;">
+                                                      <span class="hc"><span style="font-size: 25px; color: chocolate;">&#123;</span><br>
+                                                        "firstName"	: "{{resdata?.firstName || ""}}" <br>
+                                                        "Id"                                :    "{{resdata?.id || ""}}"<br>	   
+                                                        "internationalPhoneNumberVerified"	:   "{{resdata?.internationalPhoneNumberVerified || ""}}"<br>
+                                                        "lastName"	                        :   "{{resdata?.lastName || ""}}"<br>
+                                                        "originCountryIso2"	                :   "{{resdata?.originCountryIso2 || ""}}"<br>
+                                                        "originCountryIso2Alt"	            :   "{{resdata?.originCountryIso2Alt || ""}}"<br>
+                                                        "phoneCountryCode"	                :   "{{resdata?.phoneCountryCode || ""}}"<br>
+                                                        "phoneCountryIso2"	                :   "{{resdata?.phoneCountryIso2 || ""}}"<br>
+                                                        "phoneCountryIso2Alt"	            :   "{{resdata?.phoneCountryIso2Alt || ""}}"<br>
+                                                        "phoneCountryIso2Verified"	        :   "{{resdata?.phoneCountryIso2Verified || ""}}"<br>
+                                                        "phoneNumber"                       :	"{{resdata?.phoneNumber || ""}}"<br>
+                                                        "score"	                            :   "{{resdata?.score || ""}}"<br>
+                                                        "verified"	                        :   "{{resdata?.verified || ""}}"<br>
+                                                        <span style="font-size: 25px; color: chocolate;">&#125;</span>
+                                                      </span>
+                                                              
+                                                      
+                            
+                                                      </p>
+                                          </div><!-- .xs-heading END -->
+                                      </div>
+
+
+
+                                        </div>
+
+                                <!-- HERE END FORMATTED TABLE --> 
+                                    </div><!-- .pricing-body END -->
+                       
+                               <!-- .xs-single-pricing END -->
+                            </div>
+
+                        </div>
+                    </div><!-- #yearly END -->
+                </div>
+            </div>
+        </div><!-- .row END -->
+   
+<!-- END pricing section -->
+
+
+
+
+
+
+
+
+
+
+                                    <!-- <table class="table table-sm table-hover" style="margin-bottom: unset;">
+                                  
+                                            <tbody style="color: black;">
+                                                <tr><td><strong>Fields</strong></td><td><strong>Records</strong></td></tr>
+                                                       <tr>    <td scope="col">firstName</td> <td scope="col">{{resdata?.firstName || ""}}</td> </tr>
+                                                       <tr>    <td scope="col">id</td><td scope="col">{{resdata?.id || ""}}</td> </tr>
+                                                       <tr>   <td scope="col">internationalPhoneNumberVerified</td><td scope="col">{{resdata?.internationalPhoneNumberVerified || ""}}</td> </tr>
+                                                       <tr>      <td scope="col">lastName</td><td scope="col">{{resdata?.lastName || ""}}</td> </tr>
+                                                       <tr>    <td scope="col">originCountryIso2</td> <td scope="col">{{resdata?.originCountryIso2 || ""}}</td> </tr>
+                                                       <tr>   <td scope="col">originCountryIso2Alt</td> <td scope="col">{{resdata?.originCountryIso2Alt || ""}}</td> </tr>
+                                                       <tr>   <td scope="col">phoneCountryCode</td> <td scope="col">{{resdata?.phoneCountryCode || ""}}</td> </tr>
+                                                       <tr>  <td scope="col">phoneCountryIso2</td>  <td scope="col">{{resdata?.phoneCountryIso2 || ""}}</td> </tr>
+                                                       <tr>  <td scope="col">phoneCountryIso2Alt</td>  <td scope="col">{{resdata?.phoneCountryIso2Alt || ""}}</td> </tr>
+                                                       <tr>   <td scope="col">phoneCountryIso2Verified</td>  <td scope="col">{{resdata?.phoneCountryIso2Verified || ""}}</td> </tr>
+                                                       <tr>    <td scope="col">phoneNumber</td> <td scope="col">{{resdata?.phoneNumber || ""}}</td> </tr>
+                                                       <tr>    <td scope="col">score</td> <td scope="col">{{resdata?.score || ""}}</td> </tr>
+                                                       <tr>   <td scope="col">verified</td>  <td scope="col">{{resdata?.verified || ""}}</td>
+                                                    </tr>
+                                          
+                                            </tbody>
+                                          </table> -->
+
+
+
+
+
+
+                            </div>
+                        </div><!-- .single-blog-post-thumb END -->
+            </div>
+        </div>
+     
+    </div><!-- .container END -->
+    <div class="parallax-icon-wraper">
+        <img src="assets/images/hand-bloom.png" class="parallax-icon icon-one" alt="">
+        <img src="assets/images/chart.png" class="parallax-icon icon-two" alt="">
+    </div>
+</section><!-- end get free quote section -->
+
+<!-- seo info section -->
+<section class="xs-section-padding xs-seo-info" id="about">
+    <div class="container">
+        <div class="row">
+            <div class="col-lg-6">
+                <div class="xs-info-img">
+                    <img src="assets/images/info/info-1.png" alt="">
+                </div>
+            </div>
+            <div class="col-lg-6 align-self-center">
+                <div class="xs-info-wraper wow fadeInUp">
+                    <div class="xs-heading">
+                        <h3 class="section-title">Google Phone Validator Limitation</h3>
+                        <span class="line"></span>
+                    </div>
+                    <p>Google publishes a fantastic library for parsing, formatting, and validating international phone numbers : Google's libphonenumber is a popular service for phone validation, but it requires a phone number and the ISO2 code of the country as input. What if you have a name, a phone but don't know the country ? You are stuck.</p>
+                    <ul class="xs-list check">
+                        <li>We've been supporting a free API.</li>
+                        <li>NO charges or any type of tax</li>
+                        <li>Our easy-to-use code and API let you spend</li>
+                    </ul>
+                    <div class="btn-wraper">
+                    <a href="#" class="btn btn-primary">Get Started</a>
+                </div>
+                </div><!-- .xs-info-wraper END -->
+            </div>
+        </div><!-- .row END -->
+    </div><!-- .container END -->
+</section><!-- END seo info section -->
+
+<!-- working process section -->
+<section class="xs-section-padding primary-bg working-process-anim">
+    <div class="container">
+        <div class="row">
+            <div class="col-lg-6 mx-auto">
+                <div class="xs-heading text-center">
+                    <h2 class="section-subtitle">API Flow</h2>
+                    <h3 class="section-title ">Our Working API Process</h3>
+                </div><!-- .xs-heading END -->
+            </div>
+        </div>
+        <div class="row">
+            <div class="col-lg-10 mx-auto">
+                <div class="row no-gutters working-process-group">
+                    <div class="col-lg-3 col-md-6">
+                        <div class="single-work-process">
+                            <div class="work-process-icon">
+                                <img src="assets/images/pricing/a.png" alt="">
+                            </div>
+                            <h4 class="small">Select Code Language</h4>
+                        </div><!-- .single-work-process END -->
+                    </div>
+                    <div class="col-lg-3 col-md-6">
+                        <div class="single-work-process">
+                            <div class="work-process-icon">
+                                <img src="assets/images/pricing/1.png" alt="" style="height: 5em;">
+                            </div>
+                            <h4 class="small">Integrate</h4>
+                        </div><!-- .single-work-process END -->
+                    </div>
+                    <div class="col-lg-3 col-md-6">
+                        <div class="single-work-process">
+                            <div class="work-process-icon">
+                                <img src="assets/images/pricing/c.png" alt="" style="width: 7em;">
+                            </div>
+                            <h4 class="small">Set Free API Key</h4>
+                        </div><!-- .single-work-process END -->
+                    </div>
+                    <div class="col-lg-3 col-md-6">
+                        <div class="single-work-process">
+                            <div class="work-process-icon">
+                                <img src="assets/images/pricing/d.png" alt="">
+                            </div>
+                            <h4 class="small">Get Results</h4>
+                        </div><!-- .single-work-process END -->
+                    </div>
+                </div><!-- .row end -->
+            </div>
+        </div><!-- .row END -->
+    </div><!-- .container END -->
+</section><!-- END working process section -->
+
+
+<!-- services section -->
+<section class="xs-section-padding" id="service">
+    <div class="container">
+        <div class="row">
+            <div class="col-md-6 mx-auto">
+                <div class="xs-heading text-center style2">
+                    <h3 class="section-title">Services We Provide</h3>
+                    <span class="line"></span>
+                </div><!-- .xs-heading END -->
+            </div>
+        </div>
+        <div class="row">
+            <div class="col-lg-12">
+                <ul class="nav nav-tabs main-tabs" role="tablist">
+                    <li class="nav-item">
+                        <a class="nav-link active" id="tab-one-area" data-toggle="tab" href="#tab-one" role="tab" aria-controls="tab-one" aria-selected="true"><span class="icon-holder"><img src="assets/images/service-tab/icon-1.png" alt=""></span> Get started for free</a>
+                    </li>
+                    <li class="nav-item">
+                        <a class="nav-link" id="tab-two-area" data-toggle="tab" href="#tab-two" role="tab" aria-controls="tab-two" aria-selected="false"><span class="icon-holder"><img src="assets/images/service-tab/icon-2.png" alt=""></span> Guess Personal Name, Origin or Ethnicity</a>
+                    </li>
+                    <li class="nav-item">
+                        <a class="nav-link" id="tab-three-area" data-toggle="tab" href="#tab-three" role="tab" aria-controls="tab-three" aria-selected="false"><span class="icon-holder"><img src="assets/images/service-tab/icon-3.png" alt=""></span>24/7 Full Support</a>
+                    </li>
+                    <li class="nav-item">
+                        <a class="nav-link" id="tab-four-area" data-toggle="tab" href="#tab-four" role="tab" aria-controls="tab-four" aria-selected="false"><span class="icon-holder"><img src="assets/images/service-tab/icon-4.png" alt=""></span> NamSor API </a>
+                    </li>
+                    <li class="nav-item">
+                        <a class="nav-link" id="tab-five-area" data-toggle="tab" href="#tab-five" role="tab" aria-controls="tab-five" aria-selected="false"><span class="icon-holder"><img src="assets/images/service-tab/icon-5.png" alt=""></span> Number Lookup</a>
+                    </li>
+                </ul>
+                <div class="tab-content">
+                    <div class="tab-pane fadeInRight animated show active" id="tab-one" role="tabpanel" aria-labelledby="tab-one-area">
+                        <div class="single-service-preview">
+                            <div class="row">
+                                <div class="col-lg-5 col-md-6">
+                                    <div class="service-preview-img">
+                                        <img src="assets/images/service-tab/preview-1.png" alt="">
+                                    </div><!-- .service-preview-img END -->
+                                </div>
+                                <div class="col-lg-7 col-md-6">
+                                    <div class="service-preview-content">
+                                        <h4 class="xs-content-title">Get started for free</h4>
+                                        <p>Our API is free to validate up to 450 names and phone numbers per month. We have additional subscription plans to support your organization with higher volumes.</p>
+
+                                        <div class="btn-wraper">
+                                            <a href="#" class="btn btn-primary">Know more</a>
+                                        </div>
+                                    </div><!-- .service-preview-content END -->
+                                </div>
+                            </div><!-- .row END -->
+                        </div><!-- .single-service-preview END -->
+                    </div><!-- #tab-one END -->
+
+                    <div class="tab-pane fadeInRight animated" id="tab-two" role="tabpanel" aria-labelledby="tab-two-area">
+                        <div class="single-service-preview">
+                            <div class="row">
+                                <div class="col-lg-5 col-md-6">
+                                    <div class="service-preview-img">
+                                        <img src="assets/images/service-tab/preview-2.png" alt="">
+                                    </div><!-- .service-preview-img END -->
+                                </div>
+                                <div class="col-lg-7 col-md-6">
+                                    <div class="service-preview-content">
+                                        <h4 class="xs-content-title">Guess Personal Name, Origin or Ethnicity</h4>
+                                        <p>Our API will guess the personal name's country of origin, to prioritize which international phone number formats to try. For example, Andrea Rossini is an Italian name, so why not try an Italian phone number first? Our machine learning model (ML) combines both the personal name features, as well as the phone number formatting in order to validate to a E164 number with ~95% precision overall.</p>
+                                       
+                                        <div class="btn-wraper">
+                                            <a href="#" class="btn btn-primary">Know more</a>
+                                        </div>
+                                    </div><!-- .service-preview-content END -->
+                                </div>
+                            </div><!-- .row END -->
+                        </div><!-- .single-service-preview END -->
+                    </div><!-- #tab-two END -->
+
+                    <div class="tab-pane fadeInRight animated" id="tab-three" role="tabpanel" aria-labelledby="tab-three-area">
+                        <div class="single-service-preview">
+                            <div class="row">
+                                <div class="col-lg-5 col-md-6">
+                                    <div class="service-preview-img">
+                                        <img src="assets/images/service-tab/preview-3.png" alt="">
+                                    </div><!-- .service-preview-img END -->
+                                </div>
+                                <div class="col-lg-7 col-md-6">
+                                    <div class="service-preview-content">
+                                        <h4 class="xs-content-title">24/7 Support</h4>
+                                        <p>With our dedicated team of engineers and developers, we provide 99.95% uptime and 24/7 monitoring and maintenance</p>
+                                        
+                                        <div class="btn-wraper">
+                                            <a href="#" class="btn btn-primary">Know more</a>
+                                        </div>
+                                    </div><!-- .service-preview-content END -->
+                                </div>
+                            </div><!-- .row END -->
+                        </div><!-- .single-service-preview END -->
+                    </div><!-- #tab-three END -->
+
+                    <div class="tab-pane fadeInRight animated" id="tab-four" role="tabpanel" aria-labelledby="tab-four-area">
+                        <div class="single-service-preview">
+                            <div class="row">
+                                <div class="col-lg-5 col-md-6">
+                                    <div class="service-preview-img">
+                                        <img src="assets/images/service-tab/preview-4.png" alt="">
+                                    </div><!-- .service-preview-img END -->
+                                </div>
+                                <div class="col-lg-7 col-md-6">
+                                    <div class="service-preview-content">
+                                        <h4 class="xs-content-title">Email Marketing</h4>
+                                        <p>This service is powered by NamSor API, a powerful machine learning API to process personal names (detect gender, country of origin or ethnicity).</p>
+                                    
+                                        <div class="btn-wraper">
+                                            <a href="#" class="btn btn-primary">Know more</a>
+                                        </div>
+                                    </div><!-- .service-preview-content END -->
+                                </div>
+                            </div><!-- .row END -->
+                        </div><!-- .single-service-preview END -->
+                    </div><!-- #tab-four END -->
+
+                    <div class="tab-pane fadeInRight animated" id="tab-five" role="tabpanel" aria-labelledby="tab-five-area">
+                        <div class="single-service-preview">
+                            <div class="row">
+                                <div class="col-lg-5 col-md-6">
+                                    <div class="service-preview-img">
+                                        <img src="assets/images/service-tab/preview-5.png" alt="">
+                                    </div><!-- .service-preview-img END -->
+                                </div>
+                                <div class="col-lg-7 col-md-6">
+                                    <div class="service-preview-content">
+                                        <h4 class="xs-content-title">Number Lookup </h4>
+                                        <p>Save money and increase conversion rates with our number validation. We’re able to catch invalid numbers as they’re entered, making sure your message is headed to a valid number.</p>
+                                      
+                                        <div class="btn-wraper">
+                                            <a href="#" class="btn btn-primary">Know more</a>
+                                        </div>
+                                    </div><!-- .service-preview-content END -->
+                                </div>
+                            </div><!-- .row END -->
+                        </div><!-- .single-service-preview END -->
+                    </div><!-- #tab-five END -->
+                </div>
+            </div>
+        </div><!-- .row END -->
+    </div><!-- .container END -->
+</section><!-- END services section -->
+
+
+
+<!-- pricing section -->
+<section class="pricing-section xs-section-padding" id="pricing">
+    <div class="container">
+        <div class="row">
+            <div class="col-lg-4 mx-auto">
+                <div class="xs-heading text-center">
+                    <h2 class="section-subtitle">Free To Use</h2>
+                    <h3 class="section-title ">No Pricing Plans</h3>
+                </div><!-- .xs-heading END -->
+            </div>
+        </div><!-- .row END -->
+        <div class="row">
+            <div class="col-md-12 xs-pricing-group">
+                <ul class="nav nav-tabs main-nav-tab tab-swipe wow fadeIn" role="tablist">
+                    <li>
+                        <a id="monthly-tab" class="active show" data-toggle="tab" href="#monthly" role="tab" aria-controls="monthly" aria-selected="true">Monthly</a>
+                    </li>
+                    <li>
+                        <a id="yearly-tab" data-toggle="tab" href="#yearly" role="tab" aria-controls="yearly" aria-selected="false">Yearly</a>
+                    </li>
+                </ul>
+                <div class="tab-content">
+                    <div class="tab-pane fadeIn animated show active" id="monthly" role="tabpanel" aria-labelledby="monthly-tab">
+                        <div class="row">
+                            <div class="col-lg-4 col-md-6">
+                                <div class="xs-single-pricing">
+                                    <div class="pricing-header">
+                                        <h3 class="xs-content-title">Starter Plan</h3>
+                                        <div class="pricing-img-block">
+                                            <img src="assets/images/pricing/pricing-1.png" alt="hostinza pricing image">
+                                        </div>
+                                        <h2 class="price-table"><sup>$</sup>0 <sub>/mo</sub></h2>
+                                    </div><!-- .pricing-header END -->
+                                    <div class="pricing-body">
+                                        <ul class="xs-list">
+                                            <li>Easy to access</li>
+                                            <li>Free Optimization</li>
+                                            <li>24/7 support</li>
+                                        </ul>
+                                    </div><!-- .pricing-body END -->
+                                    <div class="pricing-footer">
+                                        <a href="#" class="btn btn-primary">Get Now</a>
+                                    </div><!-- .pricing-footer END -->
+                                    <div class="pulse-anim"></div>
+                                </div><!-- .xs-single-pricing END -->
+                            </div>
+                            <div class="col-lg-4 col-md-6">
+                                <div class="xs-single-pricing active">
+                                    <div class="pricing-header">
+                                        <h3 class="xs-content-title">Basic Plan</h3>
+                                        <div class="pricing-img-block">
+                                            <img src="assets/images/pricing/pricing-2.png" alt="hostinza pricing image">
+                                        </div>
+                                        <h2 class="price-table"><sup>$</sup>0 <sub>/mo</sub></h2>
+                                    </div><!-- .pricing-header END -->
+                                    <div class="pricing-body">
+                                        <ul class="xs-list">
+                                            <li>Easy to access</li>
+                                            <li>Free Optimization</li>
+                                            <li>24/7 support</li>
+                                        </ul>
+                                    </div><!-- .pricing-body END -->
+                                    <div class="pricing-footer">
+                                        <a href="#" class="btn btn-primary">Get Now</a>
+                                    </div><!-- .pricing-footer END -->
+                                    <div class="pulse-anim"></div>
+                                </div><!-- .xs-single-pricing END -->
+                            </div>
+                            <div class="col-lg-4 col-md-6">
+                                <div class="xs-single-pricing">
+                                    <div class="pricing-header">
+                                        <h3 class="xs-content-title">Business Plan</h3>
+                                        <div class="pricing-img-block">
+                                            <img src="assets/images/pricing/pricing-3.png" alt="hostinza pricing image">
+                                        </div>
+                                        <h2 class="price-table"><sup>$</sup>0 <sub>/mo</sub></h2>
+                                    </div><!-- .pricing-header END -->
+                                    <div class="pricing-body">
+                                        <ul class="xs-list">
+                                                <li>Easy to access</li>
+                                                <li>Free Optimization</li>
+                                            <li>24/7 support</li>
+                                        </ul>
+                                    </div><!-- .pricing-body END -->
+                                    <div class="pricing-footer">
+                                        <a href="#" class="btn btn-primary">Get Now</a>
+                                    </div><!-- .pricing-footer END -->
+                                    <div class="pulse-anim"></div>
+                                </div><!-- .xs-single-pricing END -->
+                            </div>
+                        </div>
+                    </div><!-- #monthly END -->
+                    <div class="tab-pane fadeIn animated" id="yearly" role="tabpanel" aria-labelledby="yearly-tab">
+                        <div class="row">
+                            <div class="col-lg-4 col-md-6">
+                                <div class="xs-single-pricing">
+                                    <div class="pricing-header">
+                                        <h3 class="xs-content-title">Basic Plan</h3>
+                                        <div class="pricing-img-block">
+                                            <img src="assets/images/pricing/pricing-1.png" alt="hostinza pricing image">
+                                        </div>
+                                        <h2 class="price-table"><sup>$</sup>0 <sub>/mo</sub></h2>
+                                    </div><!-- .pricing-header END -->
+                                    <div class="pricing-body">
+                                        <ul class="xs-list">
+                                            <li>Easy to access</li>
+                                            <li>Free Optimization</li>
+                                            <li>24/7 support</li>
+                                        </ul>
+                                    </div><!-- .pricing-body END -->
+                                    <div class="pricing-footer">
+                                        <a href="#" class="btn btn-primary">Get Now</a>
+                                    </div><!-- .pricing-footer END -->
+                                    <div class="pulse-anim"></div>
+                                </div><!-- .xs-single-pricing END -->
+                            </div>
+                            <div class="col-lg-4 col-md-6">
+                                <div class="xs-single-pricing active">
+                                    <div class="pricing-header">
+                                        <h3 class="xs-content-title">Advanced Plan</h3>
+                                        <div class="pricing-img-block">
+                                            <img src="assets/images/pricing/pricing-2.png" alt="hostinza pricing image">
+                                        </div>
+                                        <h2 class="price-table"><sup>$</sup>0 <sub>/mo</sub></h2>
+                                    </div><!-- .pricing-header END -->
+                                    <div class="pricing-body">
+                                        <ul class="xs-list">
+                                            <li>Easy to access</li>
+                                            <li>Free Optimization</li>
+                                            <li>24/7 support</li>
+                                        </ul>
+                                    </div><!-- .pricing-body END -->
+                                    <div class="pricing-footer">
+                                        <a href="#" class="btn btn-primary">Get Now</a>
+                                    </div><!-- .pricing-footer END -->
+                                    <div class="pulse-anim"></div>
+                                </div><!-- .xs-single-pricing END -->
+                            </div>
+                            <div class="col-lg-4 col-md-6">
+                                <div class="xs-single-pricing">
+                                    <div class="pricing-header">
+                                        <h3 class="xs-content-title">Business Plan</h3>
+                                        <div class="pricing-img-block">
+                                            <img src="assets/images/pricing/pricing-3.png" alt="hostinza pricing image">
+                                        </div>
+                                        <h2 class="price-table"><sup>$</sup>0 <sub>/mo</sub></h2>
+                                    </div><!-- .pricing-header END -->
+                                    <div class="pricing-body">
+                                        <ul class="xs-list">
+                                        <li>Easy to access</li>
+                                            <li>Free Optimization</li>
+                                            <li>24/7 support</li>
+                                        </ul>
+                                    </div><!-- .pricing-body END -->
+                                    <div class="pricing-footer">
+                                        <a href="#" class="btn btn-primary">Get Now</a>
+                                    </div><!-- .pricing-footer END -->
+                                    <div class="pulse-anim"></div>
+                                </div><!-- .xs-single-pricing END -->
+                            </div>
+                        </div>
+                    </div><!-- #yearly END -->
+                </div>
+            </div>
+        </div><!-- .row END -->
+    </div><!-- .container END -->
+</section><!-- END pricing section -->
+
+<!-- testimonials section -->
+<section class="xs-section-padding testimonial-section gradient-bg" id="testimonial">
+    <div class="container">
+        <div class="row">
+            <div class="col-lg-4 mx-auto">
+                <div class="xs-heading text-center">
+                    <h2 class="section-subtitle">Client’s love</h2>
+                    <h3 class="section-title ">Love from Clients</h3>
+                </div><!-- .xs-heading END -->
+            </div>
+        </div><!-- .row END -->
+        <div class="row">
+            <div class="col-lg-10 mx-auto">
+                <div class="testimonial-slider-preview owl-carousel" id="sync5">
+                    <div class="single-testimonial-preview">
+                        <p>“ We work systematically to integrated corporate responsibility in our corein business and make our expertise available for the benefit ”</p>
+                        <span class="border-line"></span>
+                    </div><!-- .single-testimonial-preview END -->
+                    <div class="single-testimonial-preview">
+                        <p>“ We work systematically to integrated corporate responsibility in our corein business and make our expertise available for the benefit We work systematically to integrated corporate responsibility in our corein business and make our expertise available for the benefit ”</p>
+                        <span class="border-line"></span>
+                    </div><!-- .single-testimonial-preview END -->
+                    <div class="single-testimonial-preview">
+                        <p>“ We work systematically to integrated corporate responsibility in our corein business and make our expertise available for the benefit ”</p>
+                        <span class="border-line"></span>
+                    </div><!-- .single-testimonial-preview END -->
+                    <div class="single-testimonial-preview">
+                        <p>“ We work systematically to integrated corporate responsibility in our corein business and make our expertise available for the benefit We work systematically to integrated corporate responsibility in our corein business and make our expertise available for the benefit ”</p>
+                        <span class="border-line"></span>
+                    </div><!-- .single-testimonial-preview END -->
+                </div>
+                <div class="testimonial-slider-thumb owl-carousel" id="sync6">
+                    <div class="single-bio-thumb">
+                        <div class="bio-image">
+                            <img src="assets/images/testimonial/testimonial-1.jpg" alt="">
+                        </div>
+                        <div class="bio-info">
+                            <h4 class="small">Sir Pobon</h4>
+                            <p>Finance Head</p>
+                        </div>
+                    </div><!-- .single-bio-thumb END -->
+                    <div class="single-bio-thumb">
+                        <div class="bio-image">
+                            <img src="assets/images/testimonial/testimonial-2.jpg" alt="">
+                        </div>
+                        <div class="bio-info">
+                            <h4 class="small">Sir Pobon</h4>
+                            <p>Finance Head</p>
+                        </div>
+                    </div><!-- .single-bio-thumb END -->
+                    <div class="single-bio-thumb">
+                        <div class="bio-image">
+                            <img src="assets/images/testimonial/testimonial-3.jpg" alt="">
+                        </div>
+                        <div class="bio-info">
+                            <h4 class="small">Sir Pobon</h4>
+                            <p>Finance Head</p>
+                        </div>
+                    </div><!-- .single-bio-thumb END -->
+                    <div class="single-bio-thumb">
+                        <div class="bio-image">
+                            <img src="assets/images/testimonial/testimonial-4.jpg" alt="">
+                        </div>
+                        <div class="bio-info">
+                            <h4 class="small">Sir Pobon</h4>
+                            <p>Finance Head</p>
+                        </div>
+                    </div><!-- .single-bio-thumb END -->
+                </div>
+            </div>
+        </div><!-- .row END -->
+    </div><!-- .container END -->
+</section><!-- END testimonials section -->
+
+<!-- latest media section -->
+
+<!-- search panel strart -->
+<!-- xs modal -->
+<div class="zoom-anim-dialog mfp-hide modal-searchPanel" id="modal-popup-2">
+    <div class="modal-dialog modal-lg">
+        <div class="modal-content">
+            <div class="xs-search-panel">
+                <form action="#" method="POST" class="xs-search-group">
+                    <input type="search" class="form-control" name="search" id="search" placeholder="Search">
+                    <button type="submit" class="search-button"><i class="icon icon-search"></i></button>
+                </form>
+            </div>
+        </div>
+    </div>
+</div><!-- End xs modal --><!-- end search panel -->
+

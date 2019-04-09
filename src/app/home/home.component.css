@@ -1,0 +1,10 @@
+.table-sm td{
+  padding: unset !important;
+}
+
+.hidden{
+  display: none !important;
+}
+.hc{
+  color: aquamarine;
+}
