@@ -1,45 +1,58 @@
 
-# NamSon phone-validation
-Global phone number validation based on personal name and phone formatting.
+# NamSor phone validation
+Global phone number validation based on personal name and phone number formatting.
 
 
 <h3>Getting started</h3>
-The following sample shows you how to use number verification API process by using NamSon API. To learn how to validate the code the user supplies and perform other operations.
 
-Whether you’re looking to build brand awareness or generate leads; we create a social strategy tailored to your targets. that engages with current and potential clients, briings traffic to your website and converts leads into sales.
+The following sample shows how to validate a locally formated phone number into an international phone number E.164
 
+E.164 is an ITU-T recommendation, titled The international public telecommunication numbering plan.
 
 <h3>How to Use</h3>
-A verification process can be used to verify a user's phone number. The Verify API confirms that a user is in possession of a specific device based on a phone number. To start a verification process, you'll need the number to be verified, and your name so the recipient can identify .
 
-Be sure the number is in international format. Make a call to (https://v2.namsor.com/NamSorAPIv2/api2/json/phoneCode), /FirstName/LastName/Number with those parameters, along with your api_key and headers .
-<br>
-httpOptions = {<br>
-headers: new HttpHeaders <br>
-'Accept': 'application/json',<br>
-'x-api-key': '4ac7667457defcf5e4ebdaa6cb985e5d'<br>
-}
-<br>
-Your format will be look like (https://v2.namsor.com/NamSorAPIv2/api2/json/phoneCode/John/Doe/+12123232117)<br>
-This is your API key: "4ac7667457defcf5e4ebdaa6cb985e5d"
+The API simply takes personal name : first name / given name and last name / surname, as well as the phone number. You don't need to have the phone number in an international format : it can be a local number. 
 
-<h3>Response You get</h1>
+Make a call to NamSor API https://v2.namsor.com/NamSorAPIv2/apidoc.html#/social/phoneCode
+with firstName lastName phoneNumber and pass the API Key as a X-API-KEY header.
 
-The response will be a JSON object. If the POST status is success the verification request was successful, and NamSon has started the process. Once you've started a verification process, you can't verify the same number until the exsisting request expires. A successful verification request will include a originCountryIso2.<br>
+<h3>Response You get</h3>
 
+Since POTUS gave his own personal number in a Tweet (https://twitter.com/realDonaldTrump/status/628590822913650688), we'll use that as a example :
+```bash
+curl -X GET "https://v2.namsor.com/NamSorAPIv2/api2/json/phoneCode/Donald/Trump/917.756.8000" -H "accept: application/json" -H "X-API-KEY: <your api key here>"
+```
 
+Will get you this JSON response : 
+```json
 {
-                            "firstName"	: "John" <br>
-                            "id"	                              :
-                            "internationalPhoneNumberVerified"	:   "+1 650-454-7093"<br>
-                            "lastName"	                        :   "Doe"<br>
-                            "originCountryIso2"	                :   "IN"<br>
-                            "originCountryIso2Alt"	            :   "PK"<br>
-                            "phoneCountryCode"	                :   "1"<br>
-                            "phoneCountryIso2"	                :   "US"<br>
-                            "phoneCountryIso2Alt"	            :   "FR"<br>
-                            "phoneCountryIso2Verified"	        :   "US"<br>
-                            "phoneNumber"                       :	"16504547093"<br>
-                            "score"	                            :   "5.315358167289838"<br>
-                            "verified"	                        :   "true"<br>
-    }               
+  "id": null,
+  "firstName": "Donald",
+  "lastName": "Trump",
+  "internationalPhoneNumberVerified": "+1 917-756-8000",
+  "phoneCountryIso2Verified": "US",
+  "phoneCountryCode": 1,
+  "phoneCountryCodeAlt": 63,
+  "phoneCountryIso2": "US",
+  "phoneCountryIso2Alt": "PH",
+  "originCountryIso2": "GB",
+  "originCountryIso2Alt": "FR",
+  "phoneNumber": "917.756.8000",
+  "verified": true,
+  "score": 1.8924464202870794
+}
+```
+
+The main output is <b>internationalPhoneNumberVerified</b>, if the number could be verified using Google's validation API. 
+
+<h3>Using from AngularJS or JQuery </h3>
+
+You can try with a few numbers for yourself or see how the API can be used from AngularJS or JQuery here,
+https://namsor.github.io/phone-validation/
+
+<h3>How it works</h3>
+
+Google's phone validation API (googlei18n/libphonenumber) normally requires as input a COUNTRY and PHONE number. NamSor's phoneCode API combines the likely country of origin from the name and the predicted phone country, based on both name and phone number formatting, to call's google phone validation API and workaround its limitations. 
+
+
+
