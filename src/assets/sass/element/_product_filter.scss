@@ -1,0 +1,41 @@
+.product-filter-area {
+    margin-bottom: 30px;
+}
+
+.product-filter-wraper {
+    display: flex;
+    justify-content: flex-end;
+    align-items: center;
+    .woocommerce-ordering {
+        margin-right: 50px;
+        margin-bottom: 0;
+    }
+}
+
+.woocommerce-ordering {
+    position: relative;
+    z-index: 10;
+    .shop-filter-title {
+        color: #777777;
+        font-size: rem(14px);
+        position: relative;
+        top: 9px;
+        padding-right: 50px;
+    }
+}
+
+.tab-filter {
+    .nav-tabs {
+        .nav-item {
+            .nav-link {
+                border: 0px;
+                color: #777777;
+                font-size: rem(18px);
+                padding: 10px;
+                &.active {
+                    color: $color-primary;
+                }
+            }
+        }
+    }
+}

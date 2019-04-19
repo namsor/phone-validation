@@ -1,0 +1,138 @@
+.xs-comments-area {
+    margin-bottom: 100px;
+    padding-bottom: 100px;
+    border-bottom: 1px solid #e7e7e7;
+    .comments-title {
+        margin-bottom: 45px;
+        font-size: rem(22px);
+        font-weight: 500;
+    }
+    .comment-body {
+        &:before {
+            display: table;
+            content: "";
+            clear: both;
+        }
+        img {
+            @include equal-size(80px);
+            border-radius: 100%;
+            float: left;
+        }
+    }
+    .meta-data {
+        margin-left: 100px;
+    }
+    .reply {
+        float: right;
+        .comment-reply-link {
+            color: #626c84;
+            font-size: rem(15px);
+            &:hover {
+                color: $color-primary;
+            }
+        }
+    }
+    .comment-author {
+        a {
+            font-weight: 500;
+            color: $title-color;
+            &:hover {
+                color: $color-primary;
+            }
+            &::after {
+                content: "/";
+                padding: 0 5px;
+                color: $bColor;
+            }
+        }
+        > p {
+            display: inline-block;
+        }
+    }
+    .comment-date {
+        color: $bColor;
+        margin-bottom: 0px;
+        font-weight: 500;
+    }
+    .comment-content {
+        margin-top: 10px;
+        padding-right: 50px;
+        p {
+            margin-bottom: 0px;
+        }
+    }
+    .comment:not(:last-child ) {
+        .children {
+            margin-left: 70px;
+        }
+        .meta-data {
+            margin-bottom: 50px;
+        }
+    }
+    &.comment-style2 {
+        padding: 60px 50px;
+        box-shadow: 0px 10px 10px 0px rgba(0, 0, 0, 0.12);
+        border-radius: 5px;
+        background-color: $color-white;
+        .comment {
+            &:not(:last-child) {
+                .comment-body {
+                    padding-bottom: 35px;
+                    margin-bottom: 35px;
+                    border-bottom: 1px solid #f5f5f5;
+                }
+                .meta-data {
+                    margin-bottom: 0px;
+                }
+                .children {
+                    margin-left: 0px;
+                    padding-left: 50px;
+                }
+            }
+        }
+        .comment-header {
+            margin-bottom: 30px;
+        }
+        .comments-title {
+            margin-bottom: 0px;
+            font-size: rem(28px);
+            color: $color-primary;
+            font-weight: 700;
+        }
+        .meta-data {
+            margin-left: 70px;
+        }
+        .comment-author {
+            > a {
+                color: $color-black;
+                font-weight: 700;
+                &::after {
+                    display: none;
+                }
+                margin-right: 40px;
+            }
+            > p {
+                &:not(:last-child) {
+                    margin-right: 40px;
+                }
+                color: #606060;
+            }
+        }
+        .comment-body {
+            img {
+                @include equal-size(50px);
+                box-shadow: 0px 10px 10px 0px rgba(0, 0, 0, 0.12);
+            }
+        }
+        .reply {
+            line-height: 1;
+            .comment-reply-link {
+                font-size: rem(25px);
+                color: $color-primary;
+                &:hover {
+                    color: $color-secondary;
+                }
+            }
+        }
+    }
+}

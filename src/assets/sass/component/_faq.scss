@@ -1,0 +1,27 @@
+.faq-accordion-group {
+    position: relative;
+    z-index: 2;
+    border-bottom: 1px solid #f7f7f7;
+    padding-bottom: 100px;
+}
+.faq-accordion-area {
+    position: relative;
+    .doodle-parallax {
+        .single-doodle {
+            position: absolute;
+            opacity: .3;
+            &.one {
+                top: 112px;
+                left: -250px;
+            }
+            &.two {
+                left: -130px;
+                bottom: 0px;
+            }
+            &.three {
+                right: -130px;
+                top: 70px;
+            }
+        }
+    }
+}

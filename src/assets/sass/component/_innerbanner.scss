@@ -1,0 +1,45 @@
+/* inner-banner-area */
+.inner-banner-area {
+    min-height: 350px;
+    display: flex;
+    align-items: center;
+    position: relative;
+    background-color: $color-primary;
+    z-index: 1;
+    .banner-image {
+        position: absolute;
+        top: 0;
+        left: 0;
+        height: 100%;
+        width: 100%;
+        background-repeat: no-repeat;
+        background-position: right center;
+        z-index: -1;
+        opacity: .1;
+    }
+}
+
+/* inner-banner-title */
+.inner-banner-title {
+    font-size: rem(36px);
+    color: #fefefe;
+    font-weight: 700;
+    margin-bottom: 15px;
+}
+
+/* breadcumbs */ 
+.breadcumbs {
+    > li {
+        color: #fefefe;
+        font-size: rem(14px);
+        &:not(:first-child) {
+            &::before {
+                content: "-";
+                padding: 0 7px 0 5px;
+            }
+        }
+        > a {
+            color: #fefefe;
+        }
+    }
+}

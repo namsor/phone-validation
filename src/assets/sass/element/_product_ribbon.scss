@@ -1,0 +1,10 @@
+$size: 45px;
+.product-ribbon {
+    border-bottom-left-radius: $size * 2;
+    border-bottom-right-radius: $size * 2;
+    background-color: $color-primary;
+    padding: 9px 16px;
+    font-size: rem(13px);
+    color: $color-white;
+    line-height: 1;
+}

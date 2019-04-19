@@ -1,0 +1,36 @@
+/* top bar */
+.xs-top-bar {
+    background-color: $color-primary;
+    padding: 14px 0;
+    .xs-list {
+        text-align: right;
+        line-height: 1;
+        li {
+            &:not(:last-child) {
+                margin-right: 17px;
+            }
+            a {
+                color: $color-white;
+                font-size: rem(13px);
+            }
+        }
+    }
+}
+.xs-top-bar-info {
+    line-height: 1;
+    li {
+        display: inline-block;
+        &:not(:last-child) {
+            padding-right: 30px;
+            margin-right: 30px;
+            border-right: 1px solid rgba($color: $color-white, $alpha: .2);
+        }
+        i {
+            padding-right: 5px;
+        }
+        a {
+            font-size: rem(13px);
+            color: $color-white;
+        }
+    }
+}

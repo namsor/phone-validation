@@ -1,0 +1,74 @@
+.single-work-process {
+    text-align: center;
+    cursor: pointer;
+    h4 {
+        color: #7897e6;
+        margin-bottom: 0px;
+        @include transition;
+    }
+    &:hover {
+        .work-process-icon {
+            border-color: #02d1d1;
+            background-color: rgb(16, 64, 210);
+            box-shadow: 0px 5px 15px 0px rgba(0, 0, 0, 0.1);
+        }
+        h4 {
+            color: $color-white;
+        }
+    }
+}
+.work-process-icon {
+    text-align: center;
+    @include equal-size-lineHeight(124px);
+    border: 1px solid #0981d8;
+    border-radius: 50%;
+    background-color: #0e49d6;
+    width: 124px;
+    height: 124px;
+    margin: 0 auto;
+    @include transition;
+    margin-bottom: 40px;
+    position: relative;
+    &::before {
+        position: absolute;
+        content: "";
+        top: 50%;
+        right: -70%;
+        width: 70%;
+        height: 1px;
+        background-color: #02cfd1;
+        opacity: .5;
+    }
+    &:after {
+        content: '';
+        position: absolute;
+        left: calc(-30% + 2px);
+        width: 10px;
+        height: 10px;
+        border-top: solid 1px #02cfd1;
+        border-right: solid 1px #02cfd1;
+        top: 50%;
+        transform: translateY(-50%) rotate(45deg);
+    }
+}
+.working-process-group {
+    [class^="col-"] {
+        &:last-child {
+            .work-process-icon {
+                &::before {
+                    display: none;
+                }
+            }
+        }
+        &:first-child {
+            .work-process-icon {
+                &::after {
+                    display: none;
+                }
+            }
+        }
+    }
+}
+
+/* work process animation */
+@import '../element/_wrokProcessAnim';

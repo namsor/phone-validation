@@ -1,0 +1,35 @@
+.newsletter-form  {
+    position: relative;
+    .form-control {
+        background-color: rgb(255, 255, 255);
+        box-shadow: 0px 10px 15px 0px rgba(0, 0, 0, 0.08);
+        height: 45px;
+        width: 100%;
+        border-radius: 22.5px;
+        padding-left: 30px;
+        border: 0px;
+    }
+    .send-button {
+        background-color: rgb(27, 209, 234);
+        position: absolute;
+        width: 51px;
+        height: 45px;
+        color: $color-white;
+        font-size: rem(18px);
+        right: 0;
+        top: 0;
+        border: 0px;
+        border-radius: 0 22.5px 22.5px 0;
+        cursor: pointer;
+        @include transition;
+        &:hover {
+            background-color: $color-primary;
+        }
+    }
+    label {
+        margin-bottom: 0px;
+        position: absolute;
+        bottom: -30px;
+        left: 0;
+    }
+}

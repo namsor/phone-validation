@@ -1,0 +1,57 @@
+.author-card {
+    background-color: $color-primary;
+    border-radius: 5px;
+    box-shadow: 0px 10px 10px 0px rgba(0, 0, 0, 0.12);
+    padding: 60px 50px;
+    margin-bottom: 60px;
+    .author-header {
+        margin-bottom: 40px;
+        .author-title {
+            color: $color-white;
+            font-size: rem(28px);
+            font-weight: 700;
+            margin-bottom: 0px;
+        }
+    }
+    .author-img {
+        margin-right: 28px;
+        @include equal-size(100px);
+        border-radius: 50%;
+        max-width: 100%;
+        flex: 0 0 100px;
+        overflow: hidden;
+    }
+    .author-bio {
+        .author-name {
+            color: $color-white;
+            font-size: rem(18px);
+            font-family: $bodyFont;
+            font-weight: 700;
+            margin-bottom: 10px;
+        }
+        .authr-designation {
+            font-family: $bodyFont;
+            font-weight: 500;
+            font-size: rem(15px);
+            color: #95b3ee;
+            margin-bottom: 20px;
+        }
+        p {
+            color: #95b3ee;
+            margin-bottom: 30px;
+        }
+        .simple-social-list {
+            > li {
+                &:not(:last-child) {
+                    margin-right: 10px;
+                }
+                > a {
+                    font-size: rem(14px);
+                    &:hover {
+                        opacity: .7;
+                    }
+                }
+            }
+        }
+    }
+}

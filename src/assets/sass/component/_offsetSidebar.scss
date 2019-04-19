@@ -1,0 +1,82 @@
+.xs-sidebar-group {
+	.xs-overlay {
+		left: 100%;
+		top: 0;
+		position: fixed;
+		z-index: 101;
+		height: 100%;
+		opacity: 0;
+		width: 100%;
+		visibility: hidden;
+		transition: all .4s ease-in .8s;
+		cursor: url(../images/cross-out.png), pointer;
+	}
+}
+.xs-sidebar-widget {
+	position: fixed;
+	right: -100%;
+    top: 0;
+	bottom: 0;
+	width: 100%;
+	max-width: 420px;
+	z-index: 999999;
+	overflow: hidden;
+	overflow-y: auto;
+	-webkit-overflow-scrolling: touch;
+	background-color: #fff;
+	transition: all .5s cubic-bezier(0.9, 0.03, 0, 0.96) .6s;
+	visibility: hidden;
+	opacity: 0;
+}
+.xs-sidebar-group {
+	&.isActive {
+		.xs-overlay {
+			opacity: .9;
+			visibility: visible;
+			transition: all .8s ease-out 0s;
+			left: 0;
+		}
+		.xs-sidebar-widget {
+			opacity: 1;
+			visibility: visible;
+			right: 0;
+			transition: all .7s cubic-bezier(0.9, 0.03, 0, 0.96) .4s;
+		}
+	}
+}
+
+.sidebar-textwidget {
+	padding: 40px;
+	padding-top: 120px;
+}
+
+.close-side-widget {
+	color: #1768dd;
+	font-size: rem(15px);
+	display: block;
+	@include equal-size-lineHeight(40px);
+	border: 1px solid currentColor;
+	border-radius: 50%;
+	text-align: center;
+}
+
+
+.sidebar-widget-container {
+	position: relative;
+	top: 150px;
+	opacity: 0;
+	visibility: hidden;
+	transition: all .3s ease-in .3s;
+	backface-visibility: hidden;
+}
+.xs-sidebar-group {
+	&.isActive {
+		.sidebar-widget-container {
+			top: 0px;
+			opacity: 1;
+			visibility: visible;
+			transition: all 1s ease-out 1.2s;
+			backface-visibility: hidden;
+		}
+	}
+}

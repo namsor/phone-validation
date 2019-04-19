@@ -1,0 +1,108 @@
+/* agency section title */
+$width: 40px;
+.xs-heading {
+    margin-bottom: 23px;
+    position: relative;
+    .section-subtitle {
+        font-size: rem(20px);
+        color: $color-primary;        
+        margin-bottom: 10px;
+        font-weight: 400;
+    }
+    .line {
+        position: relative;
+        display: inline-block;
+        padding-top: 25px;
+        width: 100%;
+        &::before ,
+        &::after {
+            position: absolute;
+            content: "";
+            bottom: 0;
+            left: 0;
+        }
+        &::before {
+            background-color: rgba($color: $color-black, $alpha: .15);
+            width: 105px;
+            height: 1px;
+        }
+        &::after {
+            background-color: $color-primary;
+            width: $width;
+            height: 3px;
+            bottom: -1px;
+        }
+    }
+    .section-title  {
+        margin-bottom: 0px;
+        span {
+            color: $color-primary;
+        }
+    }
+    &.style2 {
+        .line {
+            &::before {
+                display: none;
+            }
+        }
+    }
+    &.style3 {
+        .section-title {
+            font-weight: 700;
+        }
+        .line {
+            &::before {
+                display: none;
+            }
+            &::after {
+                width: $width * 2;
+            }
+        }
+    }
+    &.text-center {
+        // margin-bottom: 80px;
+        .line {
+            &::before ,
+            &::after {
+                left: 50%;
+                transform: translateX(-50%);
+            }
+        }
+        // &[class*=style] {
+        //     margin-bottom: 72px;
+        // }
+    }
+    &.text-right {
+        // margin-bottom: 80px;
+        .line {
+            &::before ,
+            &::after {
+                right: 0;
+                left: inherit;
+            }
+        }
+        // &[class*=style] {
+        //     margin-bottom: 72px;
+        // }
+    }
+    &[class*=text-] {
+        margin-bottom: 55px;
+    }
+    &.style4 {
+        .line {
+            margin-bottom: 25px;
+        }
+    }
+    .heading-icon {
+        color: $color-primary;
+        font-size: rem(50px);
+        margin-top: 20px;
+        display: block;
+    }
+}
+
+.primary-bg {
+    .section-subtitle , .section-title {
+        color: $color-white;
+    }
+}

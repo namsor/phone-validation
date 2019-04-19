@@ -1,82 +1,6 @@
 
-<!-- banner strart -->
-
-<section class="xs-banner" id="home">
-    <div class="banner-slider owl-carousel">
-        <div class="single-banner-slide" style="background-image: url(assets/images/slider/slider-bg-1.jpg);">
-            <div class="container">
-                <div class="row">
-                    <div class="col-lg-6 align-self-center">
-                        <div class="xs-banner-content">
-                            <h2 class="banner-subtitle">Welcome to a place where,</h2>
-                            <h3 class="banner-title">Our API will guess the personal name's</h3>
-                            <h3 class="banner-title">country of origin</h3>
-                            <!-- <h2 class="banner-subtitle">Digital Marketing</h2> -->
-                               <div class="btn-wraper">
-                                    <a href="#" class="btn btn-secondary">Get started for free</a>
-                                </div>
-                        </div><!-- .xs-banner-content END -->
-                    </div>
-                    <div class="col-lg-6">
-                        <div class="banner-image image-one">
-
-
-
-                        </div><!-- .banner-image .image-one END -->
-                    </div>
-                </div><!-- .row END -->
-            </div><!-- .container END -->
-        </div><!-- .single-banner-slide END -->
-        <div class="single-banner-slide slide-two" style="background-image: url(assets/images/pricing/hdr.jpg);">
-            <div class="container">
-                <div class="row">
-                    <div class="col-lg-6">
-                       <!--  <div class="banner-image image-two">
-                            <img src="assets/images/slider/slider-image2.png" alt="">
-                        </div>.banner-image .image-one END -->
-                    </div>
-                    <div class="col-lg-6 align-self-center">
-                        <div class="xs-banner-content">
-                          
-                            <h3 class="banner-title">FREE PHONE VALIDATION</h3>
-                            <p>WORKS WITH NUMBERS FROM
-                                ALL U.S. PHONE CARRIERS</p>
-                            <div class="btn-wraper">
-                                <a href="#" class="btn btn-secondary">Get Started</a>
-                            </div>
-                        </div><!-- .xs-banner-content END -->
-                    </div>
-                </div><!-- .row END -->
-            </div><!-- .container END -->
-        </div><!-- .single-banner-slide .slide-two END -->
-        <div class="single-banner-slide" style="background-image: url(assets/images/pricing/hdr2.jpg);">
-            <div class="container">
-                <div class="row">
-                    <div class="col-lg-6 align-self-center">
-                        <div class="xs-banner-content">
-                         
-                            <h3 class="banner-title">Use Phone Validator</h3>
-                            <p>In real-time via API or Bulk for phone list validation</p>
-                            <div class="btn-wraper">
-                                <a href="#" class="btn btn-secondary">Get Started</a>
-                            </div>
-                        </div><!-- .xs-banner-content END -->
-                    </div>
-                    <div class="col-lg-6">
-                        <div class="banner-image image-three">
-                            <img src="assets/images/slider/slider-image3.png" alt="">
-                        </div><!-- .banner-image .image-one END -->
-                    </div>
-                </div><!-- .row END -->
-            </div><!-- .container END -->
-        </div><!-- .single-banner-slide END -->
-    </div><!-- .banner-slider .owl-carousel END -->
-</section><!-- end banner strart -->
-
-
-
 <!-- get free quote section -->
-<section class="primary-bg xs-section-padding free-quote-area" style="padding: 50px 0;" data-delighter="start:0.3" id="verify">
+<section class="primary-bg xs-section-padding free-quote-area" style="padding: 120px 0;" data-delighter="start:0.3" id="verify">
     <div class="container">
       <!-- .row END -->
         <div class="row">
@@ -102,7 +26,7 @@
                             </div>
                         </div>
                         <div class="col-lg-4">
-                            <input type="number" formControlName="number" id="number" placeholder="Phone-Number" class="form-control">
+                            <input type="text" formControlName="number" id="number" placeholder="Phone-Number" class="form-control">
                             <div *ngIf="number.touched && number.invalid" style="color: white">
                                 <div *ngIf="number.errors.required">Number is required.</div>
                             </div>
@@ -114,7 +38,20 @@
                     <div class="error" style="color: black; font-size: 2em; font-family: cursive;">
                         <p>Phone Couldn't be <span style="color: red;">Verified!</span></p>
                     </div>
+                </span><br>
+                <span [ngClass]="{'hidden':pro}" style="color: white; margin-top: 5px;">
+
+                        {{resdata?.originCountryIso2 || ""}}&nbsp; : &nbsp;&nbsp;{{resdata?.internationalPhoneNumberVerified || ""}}
+
                 </span>
+                <div class="typography-group">
+                    <h4 class="mt-4" style="color: white;">How's it works:</h4>
+                    <p style="color: white; font-size: 12px;" class="mt-2">
+                        The API combines the likely country of origin from the name('FR', 'GB') and the predicted phone country
+                        ('FR', 'ES') based on both name and phone number formatting,
+                         to call's google phone validation API which requires as input a COUNTRY and PHONE number. Want to try an other NUMBER?  
+                    </p>
+                </div>
             </div>
         </div><!-- .row END -->
             </div>
@@ -132,11 +69,12 @@
             <div class="col-md-12 xs-pricing-group">
                 <ul class="nav nav-tabs main-nav-tab tab-swipe" role="tablist" style="margin-bottom: 1em !important;">
                     <li>
-                        <a id="formatted-tab" class="active show" data-toggle="tab" href="#formatted" role="tab" aria-controls="formatted" aria-selected="true">Formatted</a>
+                        <a id="formatted-tab" class="show isActive" data-toggle="tab" href="#formatted" role="tab" aria-controls="formatted" aria-selected="true" style="color: #ffd24c;">Formatted</a>
                     </li>
                     <li>
-                        <a id="json-tab" data-toggle="tab" href="#json" role="tab" aria-controls="json" aria-selected="false">JSON</a>
+                        <a id="json-tab" data-toggle="tab" href="#json" role="tab" aria-controls="json" aria-selected="false" style="color: #ffd24c;">(JSON)</a>
                     </li>
+                  
                 </ul>
                 <div class="tab-content">
                     <div class="tab-pane fadeIn animated show active" id="formatted" role="tabpanel" aria-labelledby="formatted-tab">
@@ -287,6 +225,82 @@
         <img src="assets/images/chart.png" class="parallax-icon icon-two" alt="">
     </div>
 </section><!-- end get free quote section -->
+<!-- banner strart -->
+
+<section class="xs-banner" id="home">
+    <div class="banner-slider owl-carousel">
+        <div class="single-banner-slide" style="background-image: url(assets/images/slider/slider-bg-1.jpg);">
+            <div class="container">
+                <div class="row">
+                    <div class="col-lg-6 align-self-center">
+                        <div class="xs-banner-content">
+                            <h2 class="banner-subtitle">Welcome to a place where,</h2>
+                            <h3 class="banner-title">Our API will guess the personal name's</h3>
+                            <h3 class="banner-title">country of origin</h3>
+                            <!-- <h2 class="banner-subtitle">Digital Marketing</h2> -->
+                               <div class="btn-wraper">
+                                    <a href="#" class="btn btn-secondary">Get started for free</a>
+                                </div>
+                        </div><!-- .xs-banner-content END -->
+                    </div>
+                    <div class="col-lg-6">
+                        <div class="banner-image image-one">
+
+
+
+                        </div><!-- .banner-image .image-one END -->
+                    </div>
+                </div><!-- .row END -->
+            </div><!-- .container END -->
+        </div><!-- .single-banner-slide END -->
+        <div class="single-banner-slide slide-two" style="background-image: url(assets/images/pricing/hdr.jpg);">
+            <div class="container">
+                <div class="row">
+                    <div class="col-lg-6">
+                       <!--  <div class="banner-image image-two">
+                            <img src="assets/images/slider/slider-image2.png" alt="">
+                        </div>.banner-image .image-one END -->
+                    </div>
+                    <div class="col-lg-6 align-self-center">
+                        <div class="xs-banner-content">
+                          
+                            <h3 class="banner-title">FREE PHONE VALIDATION</h3>
+                            <p>WORKS WITH NUMBERS FROM
+                                ALL U.S. PHONE CARRIERS</p>
+                            <div class="btn-wraper">
+                                <a href="#" class="btn btn-secondary">Get Started</a>
+                            </div>
+                        </div><!-- .xs-banner-content END -->
+                    </div>
+                </div><!-- .row END -->
+            </div><!-- .container END -->
+        </div><!-- .single-banner-slide .slide-two END -->
+        <div class="single-banner-slide" style="background-image: url(assets/images/pricing/hdr2.jpg);">
+            <div class="container">
+                <div class="row">
+                    <div class="col-lg-6 align-self-center">
+                        <div class="xs-banner-content">
+                         
+                            <h3 class="banner-title">Use Phone Validator</h3>
+                            <p>In real-time via API or Bulk for phone list validation</p>
+                            <div class="btn-wraper">
+                                <a href="#" class="btn btn-secondary">Get Started</a>
+                            </div>
+                        </div><!-- .xs-banner-content END -->
+                    </div>
+                    <div class="col-lg-6">
+                        <div class="banner-image image-three">
+                            <img src="assets/images/slider/slider-image3.png" alt="">
+                        </div><!-- .banner-image .image-one END -->
+                    </div>
+                </div><!-- .row END -->
+            </div><!-- .container END -->
+        </div><!-- .single-banner-slide END -->
+    </div><!-- .banner-slider .owl-carousel END -->
+</section><!-- end banner strart -->
+
+
+
 
 <!-- seo info section -->
 <section class="xs-section-padding xs-seo-info" id="about">

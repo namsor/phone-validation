@@ -1,0 +1,170 @@
+@mixin border-radius($radius) {
+	border-radius: $radius;
+}
+
+//usage: @include shift([property],[duration],[easing]);
+@mixin transition($property: all, $duration: .4s, $ease: ease){
+	transition: $property $duration $ease;
+}
+
+@mixin background-content($repeat: no-repeat, $size: cover, $position: center center) {
+	background-repeat: $repeat;
+	background-size: $size;
+	background-position: $position;
+}
+
+@mixin background-color($color) {
+	background-color: $color;
+}
+
+@mixin width($width) {
+	width: $width;
+}
+
+@mixin equal-size($width, $height: $width) {
+	width: $width;
+	height: $height;
+}
+
+@mixin equal-size-lineHeight($width, $height: $width, $Lheight: $width) {
+	width: $width;
+	height: $height;
+	line-height: $Lheight;
+}
+
+@mixin height-lh($height, $Lheight: $height) {
+	height: $height;
+	line-height: $Lheight;
+}
+
+@mixin flex-position($display, $contet, $items) {
+	display: $display;
+	justify-content: $contet;
+	align-items: $items;
+}
+
+@mixin position($position) {
+	position: $position;
+}
+
+@mixin center-position($top: $top, $left: $top) {
+	top: $top;
+	left: $top;
+	transform: translate(-#{$top}, -#{$top});
+}
+
+@mixin border($direction, $width, $style, $color) {
+	border-#{$direction}: $width $style $color;
+}
+
+@mixin borders($width, $style, $color) {
+	border: $width $style $color;
+}
+
+@mixin my-border($direction) {
+	@include border($direction, 1px, solid, #e7e7e7);
+}
+
+@mixin my-borders() {
+	@include borders(1px, solid, #eaeaea);
+}
+
+@mixin altFont {
+	font-family: 'Pacifico', cursive;
+}
+
+@mixin linear-gradient($direction, $color-stops...) {
+	background: nth(nth($color-stops, 1), 1);
+	background: -webkit-linear-gradient(legacy-direction($direction), $color-stops);
+	background: linear-gradient($direction, $color-stops);
+}
+@mixin gradient-one() {
+	@include linear-gradient(93deg, rgb(3,105,209) 0%, rgb(0,236,188) 100%);
+}
+
+@mixin input-placeholder {
+    &::-moz-placeholder { @content; }
+    &:-moz-placeholder { @content; }
+    &:-ms-input-placeholder { @content; }
+    &::-webkit-input-placeholder { @content; }
+}
+
+@mixin responsive-ratio($x,$y, $pseudo: false) {
+    $padding: unquote( ( $y / $x ) * 100 + '%' );
+    @if $pseudo {
+        &:before {
+            @include pseudo($pos: relative);
+            width: 100%;
+            padding-top: $padding;
+        }
+    } @else {
+        padding-top: $padding;
+    }
+}
+
+@mixin owlDotStyle {
+    .owl-dots {
+        text-align: center;
+        line-height: 1;
+        margin-top: 55px;
+        button {
+            &:not(:last-child) {
+                margin-right: 8px;
+            }
+            &.active {
+                span {
+                    opacity: 1;
+                    transform: scale(1.4);
+                }
+            }
+            span {
+                display: block;
+                border-radius: 50%;
+                background-color: $color-primary;
+                opacity: 0.302;
+                @include equal-size(6px);
+                @include transition;
+                transform-origin: center center;
+            }
+        }
+    }
+}
+
+// example
+
+// div {
+//     @include responsive-ratio(16,9);
+// }
+
+@mixin inputPlaceholder() {
+    $selector: '';
+    $prefixes: (
+        moz: "::-moz",
+        webkit: "::-webkit",
+        ie: ":-ms"
+    );
+    @each $prop, $value in $prefixes {
+        @if $prop != "moz" {
+            $selector: #{$value}-input-placeholder;
+        } @else {
+            $selector: #{$value}-placeholder;
+        }
+        @if & {
+            &#{$selector} {
+                @content;
+            }
+        } @else {
+            #{$selector} {
+                @content;
+            }
+        }
+    }
+    &::placeholder {
+      @content;
+    }
+}
+
+// Example
+// @include inputPlaceholder() {
+// 	color: #919191;
+// };

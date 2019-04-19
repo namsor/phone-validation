@@ -1,0 +1,248 @@
+@for $i from 0 through 10 {
+	.xs-mb-#{$i} {
+		margin-bottom: $i * 10px;
+	}
+	.xs-pb-#{$i} {
+		padding-bottom: $i * 10px;
+	}
+}
+
+/* margin 0 */
+.xs-margin-0 {
+	margin: 0;
+}
+
+/* xs padding */
+.xs-padding-0 {
+	padding: 0;
+}
+
+/* overlay list */
+.xs-overlay {
+	position: absolute;
+	top: 0;
+	left: 0;
+	height: 100%;
+	width: 100%;
+	opacity: .5;
+	z-index: 0;
+}
+
+.gradient-bg {
+	background: rgb(27,196,253);
+	background: linear-gradient(90deg, rgba(27,196,253,1) 0%, rgba(56,59,255,1) 100%);
+	.xs-heading {
+		.section-title ,
+		.section-subtitle {
+			color: $color-white;
+		}
+	}
+}
+
+// first color name and second your selected color
+$colorList: (black, $color-black),
+			(white, $color-white),
+			(primary, $color-primary),
+			(secondary, $color-secondary),
+			(gray, #f3f5f9);
+@each $colorName, $color in $colorList {
+	/* color */
+	.#{$colorName}-color {
+		color: $color; 
+	}
+	/* background color */
+	.#{$colorName}-bg {
+		background-color: $color; 
+	}
+}
+
+/* remove from control focus box shadow */
+.form-control {
+	&:focus {
+		box-shadow: none;
+	}
+}
+
+/* bootstrap nav style reset */
+.nav-tabs {
+	border-bottom: 0px;
+}
+
+/* owl image preset */
+.owl-carousel .owl-item img {
+	width: auto;
+}
+
+/* tab pane animation */
+.tab-pane.animated {
+	animation-duration: 1s;
+}
+
+/* remove iframe box shadow and background */
+.mfp-iframe-scaler iframe {
+	box-shadow: none;
+	background: transparent;
+}
+
+img {
+	-webkit-user-select: none;
+	-khtml-user-select: none;
+	-moz-user-select: none;
+	-o-user-select: none;
+	user-select: none;
+}
+
+a {
+	@include transition;
+}
+
+/* simple button */
+.simple-btn {
+	font-weight: 700;
+	display: inline-block;
+	i {
+		padding-left: 8px;
+		position: relative;
+		top: 2px;
+		transition: padding-left .4s ease;
+	}
+	&:hover {
+		i {
+			padding-left: 4px;
+		}
+	}
+}
+
+p {
+	&:last-child {
+		margin-bottom: 0px;
+	}
+}
+
+/* section padding */
+$section-padding: 100px;
+.xs-section-padding {
+	padding: $section-padding 0;
+}
+.xs-section-padding-bottom {
+	padding-bottom: $section-padding;
+}
+.xs-section-padding-top {
+	padding-top: $section-padding;
+}
+$minimize: 35px;
+.section-padding-small-bottom {
+	padding-bottom: $section-padding - $minimize;
+}
+.section-padding-small-top {
+	padding-top: $section-padding - $minimize;
+}
+.section-padding-small {
+	padding: ($section-padding - $minimize) 0px;
+}
+
+a{
+	@include transition;
+}
+
+h1,h2,h3,h4,h5 {
+	color: $title-color;
+	font-family: $titleFont;
+}
+
+h1, .banner-title {
+	color: $color-white;
+	font-size: rem(56px);
+	font-weight: 900;
+}
+
+h3, .section-title {
+	font-size: rem(36px);
+	font-weight: 900;
+	a {
+		color: inherit;
+		&:hover {
+			color: $color-primary;
+		}
+	}
+}
+
+h4, .xs-content-title {
+	font-size: rem(24px);
+	font-weight: 700;
+	&.small {
+		font-size: rem(20px);
+		font-weight: 700;
+	}
+	a {
+		color: inherit;
+		&:hover {
+			color: $color-primary;
+		}
+	}
+}
+
+iframe {
+	width: 100%;
+	height: 100%;
+}
+
+img[data-scrollax] {
+    pointer-events: none;
+}
+
+.vertical-dots {
+	display: inline-block;
+	@include equal-size(4px);
+	border-radius: 50%;
+	background-color: $color-primary;
+	box-shadow: 0px 6px 0px 0px $color-primary, 0px 12px 0px 0px $color-primary;
+    position: relative;
+    top: -8px;
+}
+
+.border-divider {
+	height: 4px;
+	width: 30px;
+	display: inline-block;
+	background-color: $color-primary;
+	border-radius: 2px;
+	position: relative;
+	margin-left: 27px;
+	&::before {
+		content: "";
+		position: absolute;
+		left: -27px;
+		top: 0;
+		display: inline-block;
+		height: 4px;
+		width: 4px;
+		border-radius: 50%;
+		background-color: $color-primary;
+		box-shadow: 9px 0px 0px 0px $color-primary, 18px 0px 0px 0px $color-primary;
+	}
+	&.style-white {
+		background-color: $color-white;
+		&::before {
+			background-color: $color-white;
+			box-shadow: 9px 0px 0px 0px $color-white, 18px 0px 0px 0px $color-white;
+		}
+	}
+}
+
+.big-watermark-icon {
+	position: absolute;
+	bottom: -90px;
+	left: 50%;
+	transform: translateX(-50%);
+	opacity: .05;
+	font-size: rem(460px);
+	color: $color-black;
+	line-height: 1;
+	&.small-version {
+		bottom: 80px;
+		opacity: .03;
+		font-size: rem(300px);
+		color: #000000;
+	}
+}

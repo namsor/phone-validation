@@ -1,0 +1,83 @@
+.current-section {
+    .working-process-group {
+        .work-process-icon {
+            animation-duration: 1s;
+            animation-fill-mode: both;
+            animation-name: bounceIns;
+            &::before {
+                right: -70%;
+                opacity: .5;
+            }
+        }
+        [class^="col-"] {
+            &:nth-of-type(2) {
+                .work-process-icon {
+                    animation-delay: .5s;
+                    &::before {
+                        transition-delay: .4s;
+                    }
+                }
+            }
+            &:nth-of-type(3) {
+                .work-process-icon {
+                    animation-delay: .7s;
+                    &::before {
+                        transition-delay: .6s;
+                    }
+                }
+            }
+            &:last-child {
+                .work-process-icon {
+                    animation-delay: .9s;
+                    &::before {
+                        transition-delay: .8s;
+                    }
+                }
+            }
+        }
+    }
+}
+
+.working-process-anim {
+    .work-process-icon {
+        opacity: 0;
+        &::before {
+            right: 0%;
+            transition: all 1s ease;
+            opacity: 0;
+        }
+    }
+}
+
+@keyframes bounceIns {
+    from, 20%, 40%, 60%, 80%, to {
+      animation-timing-function: cubic-bezier(0.215, 0.610, 0.355, 1.000);
+    }
+  
+    0% {
+      opacity: 0;
+      transform: scale3d(.3, .3, .3);
+    }
+  
+    20% {
+      transform: scale3d(1.1, 1.1, 1.1);
+    }
+  
+    40% {
+      transform: scale3d(.9, .9, .9);
+    }
+  
+    60% {
+      opacity: 1;
+      transform: scale3d(1.03, 1.03, 1.03);
+    }
+  
+    80% {
+      transform: scale3d(.97, .97, .97);
+    }
+  
+    to {
+      opacity: 1;
+      transform: scale3d(1, 1, 1);
+    }
+  }

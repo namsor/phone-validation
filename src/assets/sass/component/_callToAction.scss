@@ -1,0 +1,39 @@
+.call-to-action-area {
+    background-color: $color-primary;
+    position: relative;
+    padding: 77px 0;
+    &::before {
+        position: absolute;
+        content: "";
+        top: 0;
+        left: 0;
+        height: 100%;
+        width: 100%;
+        background-image: url(../images/backgrounds/background-1.jpg);
+        @include background-content();
+        opacity: .1;
+    }
+    .call-to-action-content {
+        h2 {
+            margin-bottom: 0;
+            color: $color-white;
+        }
+    }
+    .btn-wraper {
+        text-align: right;
+        margin-top: 16px;
+        .btn {
+            padding: 0px 40px;
+            box-shadow: none;
+            border-radius: 0px;
+        }
+    }
+}
+
+.call-to-action-content {
+    padding-right: 95px;
+    h2 {
+        font-size: rem(36px);
+        font-weight: 700;
+    }
+}

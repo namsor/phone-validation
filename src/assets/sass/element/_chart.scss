@@ -1,0 +1,29 @@
+.piechats-wraper {
+    .single-piechart {
+        &:not(:last-child) {
+            margin-right: 10px;
+        }
+        float: left;
+        display: inline-block;
+        position: relative;
+        .chart-content {
+            position: absolute;
+            top: 50%;
+            left: 0;
+            width: 100%;
+            transform: translateY(-50%);
+            text-align: center;
+            > p {
+                margin-bottom: 4px;
+                color: $color-black;
+                font-size: rem(14px);
+            }
+            > .chart-value {
+                font-size: rem(28px);
+                font-weight: 900;
+                font-family: $titleFont;
+                line-height: 1;
+            }
+        }
+    }
+}

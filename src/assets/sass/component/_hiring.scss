@@ -1,0 +1,18 @@
+.hiring-image {
+    text-align: right;
+}
+.hiring-content {
+    padding-top: 30px;
+    h2 {
+        font-size: rem(28px);
+        color: #7a7a7a;
+        font-weight: 400;
+        line-height: line-height(28px, 41.09px);
+        margin-bottom: 35px;
+        span {
+            display: block;
+            color: $color-primary;
+            font-weight: 700;
+        }
+    }
+}

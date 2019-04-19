@@ -1,0 +1,40 @@
+.woocommerce {
+    &.woocommerce-product-rating {
+        .star-rating {
+            margin: 0;
+            margin-bottom: 30px;
+            float: none;
+            width: auto;
+            overflow: visible;
+            font-family: inherit;
+        }
+    }
+    .star-rating {
+        font-size: rem(14px);
+        &::before {
+            content: '\f005\f005\f005\f005\f006';
+            color: #efc71f;
+            font-family: $iconFont;
+            padding-right: 15px;
+            letter-spacing: 3px;
+            position: static;
+        }
+        span {
+            &::before {
+                display: none;
+            }
+        }
+        .woocommerce-review-link {
+            color: #777777;
+            &:hover {
+                color: $color-primary;
+            }
+            .count {
+                overflow: visible;
+                float: none;
+                position: static;
+                padding-top: 0;
+            }
+        }
+    }
+}

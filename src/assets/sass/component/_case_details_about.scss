@@ -1,0 +1,44 @@
+.about-info {
+    .content-title {
+        font-size: rem(30px);
+        font-weight: 600;
+        margin-bottom: 25px;
+    }
+}
+.case-about-area {
+    .about-info {
+        width: calc(100% - 160px);
+    }
+    position: relative;
+    .doodle-parallax {
+        img {
+            position: absolute;
+            bottom: 0;
+            left: -120px;
+            opacity: .3;
+        }
+    }
+}
+
+.list-group {
+    .simple-social-list {
+        li {
+            &:not(:last-child) {
+                margin-right: 14px;
+            }
+            a {
+                font-size: rem(14px);
+            }
+        }
+    }
+}
+
+.inner-banner-area {
+    + .case-about-area {
+        .case-about-img {
+            margin-top: -267px;
+            position: relative;
+            z-index: 2;
+        }
+    }
+}

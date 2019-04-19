@@ -1,0 +1,16 @@
+.dropcaps {
+    &::first-letter {
+        font-size: rem(42px);
+        font-weight: 700;
+        float: left;
+        line-height: 25px;
+        padding-top: 4px;
+        padding-right: 8px;
+        padding-left: 3px;
+    }
+    &.style2 {
+        &::first-letter {
+            color: $color-primary;
+        }
+    }
+}

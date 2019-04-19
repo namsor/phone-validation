@@ -1,0 +1,27 @@
+.widget-heading {
+	position: absolute;
+	top: 0;
+	right: 0;
+	padding: 25px;
+}
+.mini_cart_item {
+	margin-bottom: 20px;
+	padding-bottom: 20px;
+}
+.xs-empty-content {
+	.widget-title {
+		font-size: rem(22px);
+	}
+	.xs-title {
+		margin-bottom: 20px;
+		font-size: rem(18px);
+	}
+	text-align: center;
+	padding: 120px 30px 30px;
+	.woocommerce-mini-cart__empty-message {
+		font-size: rem(20px);
+	}
+	.empty-cart-icon {
+		font-size: rem(50px);
+	}
+}

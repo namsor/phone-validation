@@ -1,0 +1,99 @@
+/* single product */
+.xs-single-product {
+    margin-bottom: 20px;
+    &:hover {
+        .product-header {
+            > img {
+                transform: scale(1.05);
+            }
+            &::before {
+                opacity: 1;
+            }
+            .hover-area {
+                transform: translateY(-50%);
+                opacity: 1;
+            }
+        }
+    }
+    .product-footer {
+        text-align: center;
+        padding: 30px 15px;
+        .product-title {
+            margin-bottom: 5px;
+            font-size: rem(14px);
+            font-weight: 400;
+            a {
+                color: $color-black;
+                &:hover {
+                    color: $color-primary;
+                }
+            }
+        }
+    }
+}
+
+.product-header {
+    position: relative;
+    border-radius: 5px;
+    overflow: hidden;
+    &::before {
+        position: absolute;
+        content: "";
+        top: 0;
+        left: 0;
+        height: 100%;
+        width: 100%;
+        background-color: rgba($color: $color-primary, $alpha: .80);
+        @include transition;
+        opacity: 0;
+        z-index: 1;
+    }
+    > img {
+        transform: scale(1);
+        @include transition;
+    }
+    .hover-area {
+        position: absolute;
+        top: 50%;
+        transform: translateY(-0%);
+        left: 0;
+        width: 100%;
+        text-align: center;
+        z-index: 2;
+        @include transition;
+        opacity: 0;
+    }
+    .image-content {
+        position: absolute;
+        right: 20px;
+        top: 0;
+        z-index: 2;
+    }
+    .btn {
+        $size: 45px;
+        @include height-lh($size);
+        padding: 0 30px;
+        &[class*="icon"] {
+            i {
+                line-height: $size;
+            }
+        }
+    }
+}
+.price {
+    font-size: rem(22px);
+    font-weight: 700;
+    font-family: $titleFont;
+    del {
+        color: #d7d7d7;
+        padding-right: 10px;
+    }
+    ins {
+        text-decoration: none;
+        color: $color-primary;
+    }
+}
+
+.promo-banner {
+    display: block;
+}

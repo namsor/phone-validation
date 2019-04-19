@@ -1,0 +1,9 @@
+.product-info-details-wraper {
+	p {
+		font-size: rem(17px);
+		color: #777777;
+		&:not(:last-child) {
+			margin-bottom: 30px;
+		}
+	}
+}

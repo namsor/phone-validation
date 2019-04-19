@@ -1,0 +1,73 @@
+.xs-info-img {
+    animation-iteration-count: infinite;
+    animation-timing-function: cubic-bezier(0.54, 0.085, 0.5, 0.92);
+    animation-name: floating;
+    animation-duration: 5s;
+}
+
+.xs-info-wraper {
+    padding-left: 30px;
+    .content-title {
+        margin-bottom: 30px;
+    }
+    p {
+        margin-bottom: 30px;
+    }
+    .xs-list {
+        li {
+            &:not(:last-child) {
+                margin-bottom: 14px;
+            }
+        }
+        margin-bottom: 40px;
+    }
+    .xs-heading {
+        .section-title {
+            &.line {
+                margin-bottom: 25px;
+            }
+        }
+    }
+    &.style2 {
+        padding-left: 0px;
+        .xs-list {
+            li {
+                &:not(:last-child) {
+                    margin-bottom: 6px;
+                }
+            }
+        }
+    }
+}
+
+.xs-info-list {
+    padding-left: 10px;
+    margin-bottom: 30px;
+    .xs-title {
+        margin-bottom: 15px;
+    }
+    p {
+        margin-bottom: 0px;
+    }
+}
+
+.xs-xs-info {
+    .row {
+        margin-bottom: 90px;
+        + .row {
+            margin-bottom: 0px;
+        }
+    }
+}
+
+@keyframes floating{
+    0% {
+        transform:rotateX(0deg) translateY(0px)
+    }
+    50% {
+        transform:rotateX(0deg) translateY(15px)
+    }
+    100% {
+        transform:rotateX(0deg) translateY(0px)
+    }
+}
