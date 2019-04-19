@@ -1,7 +1,6 @@
 
-# NamSor phone validation
-Global phone number validation based on personal name and phone number formatting.
-
+# NamSor phone validation API
+A free API for global phone number validation based on personal name and phone number formatting.
 
 <h3>Getting started</h3>
 
