@@ -1,0 +1,102 @@
+$background: transparent;
+$select-color: #7b7b7b;
+$select-background: #f7f8fd;
+$select-width: 230px;
+$select-height: 44px; 
+
+
+.select-hidden {
+  display: none;
+  visibility: hidden;
+  padding-right: 10px;
+}
+.select {
+  cursor: pointer;
+  display: block;
+  position: relative;
+  font-size: 16px;
+  color: $select-color;
+  width: $select-width;
+  height: $select-height;
+  float: right;
+}
+.select-styled {
+  position: absolute; 
+  top: 0;
+  right: 0;
+  bottom: 0;
+  left: 0;
+  background-color: $select-background;
+  padding: 10px 15px;
+  transition: all 0.2s ease-in;
+  height: $select-height;
+  border-radius: 5px;
+  color: #8d8d90;
+  text-align: left;
+  font-size: rem(14px);
+  &:after {
+    content:"\e874";
+    position: absolute;
+    top: 10px;
+    right: 19px;
+    font-family: $iconFont2;
+    @include transition;
+    transform-origin: center center;
+    transform: rotateX(0deg);
+    color: $color-black;
+  }
+  &:hover {
+    background-color: darken($select-background, 2);
+  }
+  &:active, &.active {
+    background-color: darken($select-background, 5);
+    &:after {
+      transform: rotateX(180deg);
+      color: $color-primary;
+    }
+  }
+  &.active {
+    color: $color-primary;
+  }
+}
+
+.select-options {
+  display: none; 
+  position: absolute;
+  top: calc(100% + 20px);
+  left: 0%;
+  min-width: $select-width;
+  z-index: 999;
+  &::before {
+    position: absolute;
+    content: "";
+    top: -8px;
+    left: 50%;
+    @include equal-size(16px);
+    transform: translateX(-50%) rotate(45deg);
+    z-index: -1;
+  }
+  li {
+    padding: 15px;
+    border-top: 1px solid darken($color-primary, 2);
+    @include transition;
+    color: $color-white;
+    text-align: left;
+    line-height: 1;
+    font-size: rem(14px);
+    &:first-child {
+      border-top: 0px;
+    }
+    &:hover {
+      background: darken($color: $color-primary, $amount: 10);
+    }
+    &[rel="hide"] {
+      display: none;
+    }
+  }
+}
+
+.select-options ,
+.select-options::before {
+  background-color: $color-primary;
+}

@@ -1,0 +1,32 @@
+.insta-feed-wraper {
+    width: calc(100% - 65px);
+}
+.insta-feed {
+    &::after {
+        display: block;
+        clear: both;
+        content: "";
+    }
+    li {
+        width: calc(33.333333% - 8px);
+        float: left;
+        margin-bottom: 8px;
+        position: relative;
+        overflow: hidden;
+        &:not(:last-child) {
+            margin-right: 8px;
+        }
+        img {
+            border-radius: 3px;
+            transform: scale(1);
+            @include transition;
+        }
+        a {
+            &:hover {
+                img {
+                    transform: scale(1.05);
+                }
+            }
+        }
+    }
+}

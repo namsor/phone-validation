@@ -1,0 +1,33 @@
+.language-content {
+	p {
+		color: $color-white;
+		text-align: center;
+		margin-bottom: 40px;
+		font-size: rem(20px);
+	}
+}
+
+/* language modal */
+.flag-lists {
+	text-align: center;
+	li {
+		display: inline-block;		
+		margin-right: 25px;
+		&:last-child {
+			margin-right: 0;
+		}
+		a {
+			display: block;
+			color: $color-white;
+			@include transition;
+			backface-visibility: hidden;
+			&:hover {
+				opacity: .7;
+			}
+			img {
+				@include equal-size(40px);
+				margin-right: 10px;
+			}
+		}
+	}
+}

@@ -1,0 +1,103 @@
+/* line 2, E:/Pobon/Server/htdocs/HTML/seo/demo/seocify-html/assets/sass/element/_wrokProcessAnim.scss */
+.animated .work-process-icon {
+  opacity: 0; }
+  /* line 4, E:/Pobon/Server/htdocs/HTML/seo/demo/seocify-html/assets/sass/element/_wrokProcessAnim.scss */
+  .animated .work-process-icon::before {
+    right: 0%;
+    -webkit-transition: all 1s ease;
+    -o-transition: all 1s ease;
+    transition: all 1s ease;
+    opacity: 0; }
+/* line 11, E:/Pobon/Server/htdocs/HTML/seo/demo/seocify-html/assets/sass/element/_wrokProcessAnim.scss */
+.animated .working-process-group .work-process-icon {
+  -webkit-animation-duration: 1s;
+  animation-duration: 1s;
+  -webkit-animation-fill-mode: both;
+  animation-fill-mode: both;
+  -webkit-animation-name: bounceIns;
+  animation-name: bounceIns; }
+  /* line 15, E:/Pobon/Server/htdocs/HTML/seo/demo/seocify-html/assets/sass/element/_wrokProcessAnim.scss */
+  .animated .working-process-group .work-process-icon::before {
+    right: -70%;
+    opacity: .5; }
+/* line 22, E:/Pobon/Server/htdocs/HTML/seo/demo/seocify-html/assets/sass/element/_wrokProcessAnim.scss */
+.animated .working-process-group [class^="col-"]:nth-of-type(2) .work-process-icon {
+  -webkit-animation-delay: .5s;
+  animation-delay: .5s; }
+  /* line 24, E:/Pobon/Server/htdocs/HTML/seo/demo/seocify-html/assets/sass/element/_wrokProcessAnim.scss */
+  .animated .working-process-group [class^="col-"]:nth-of-type(2) .work-process-icon::before {
+    -webkit-transition-delay: .4s;
+    -o-transition-delay: .4s;
+    transition-delay: .4s; }
+/* line 30, E:/Pobon/Server/htdocs/HTML/seo/demo/seocify-html/assets/sass/element/_wrokProcessAnim.scss */
+.animated .working-process-group [class^="col-"]:nth-of-type(3) .work-process-icon {
+  -webkit-animation-delay: .7s;
+  animation-delay: .7s; }
+  /* line 32, E:/Pobon/Server/htdocs/HTML/seo/demo/seocify-html/assets/sass/element/_wrokProcessAnim.scss */
+  .animated .working-process-group [class^="col-"]:nth-of-type(3) .work-process-icon::before {
+    -webkit-transition-delay: .6s;
+    -o-transition-delay: .6s;
+    transition-delay: .6s; }
+/* line 38, E:/Pobon/Server/htdocs/HTML/seo/demo/seocify-html/assets/sass/element/_wrokProcessAnim.scss */
+.animated .working-process-group [class^="col-"]:last-child .work-process-icon {
+  -webkit-animation-delay: .9s;
+  animation-delay: .9s; }
+  /* line 40, E:/Pobon/Server/htdocs/HTML/seo/demo/seocify-html/assets/sass/element/_wrokProcessAnim.scss */
+  .animated .working-process-group [class^="col-"]:last-child .work-process-icon::before {
+    -webkit-transition-delay: .8s;
+    -o-transition-delay: .8s;
+    transition-delay: .8s; }
+
+@-webkit-keyframes bounceIns {
+  from, 20%, 40%, 60%, 80%, to {
+    -webkit-animation-timing-function: cubic-bezier(0.215, 0.61, 0.355, 1);
+    animation-timing-function: cubic-bezier(0.215, 0.61, 0.355, 1); }
+  0% {
+    opacity: 0;
+    -webkit-transform: scale3d(0.3, 0.3, 0.3);
+    transform: scale3d(0.3, 0.3, 0.3); }
+  20% {
+    -webkit-transform: scale3d(1.1, 1.1, 1.1);
+    transform: scale3d(1.1, 1.1, 1.1); }
+  40% {
+    -webkit-transform: scale3d(0.9, 0.9, 0.9);
+    transform: scale3d(0.9, 0.9, 0.9); }
+  60% {
+    opacity: 1;
+    -webkit-transform: scale3d(1.03, 1.03, 1.03);
+    transform: scale3d(1.03, 1.03, 1.03); }
+  80% {
+    -webkit-transform: scale3d(0.97, 0.97, 0.97);
+    transform: scale3d(0.97, 0.97, 0.97); }
+  to {
+    opacity: 1;
+    -webkit-transform: scale3d(1, 1, 1);
+    transform: scale3d(1, 1, 1); } }
+
+@keyframes bounceIns {
+  from, 20%, 40%, 60%, 80%, to {
+    -webkit-animation-timing-function: cubic-bezier(0.215, 0.61, 0.355, 1);
+    animation-timing-function: cubic-bezier(0.215, 0.61, 0.355, 1); }
+  0% {
+    opacity: 0;
+    -webkit-transform: scale3d(0.3, 0.3, 0.3);
+    transform: scale3d(0.3, 0.3, 0.3); }
+  20% {
+    -webkit-transform: scale3d(1.1, 1.1, 1.1);
+    transform: scale3d(1.1, 1.1, 1.1); }
+  40% {
+    -webkit-transform: scale3d(0.9, 0.9, 0.9);
+    transform: scale3d(0.9, 0.9, 0.9); }
+  60% {
+    opacity: 1;
+    -webkit-transform: scale3d(1.03, 1.03, 1.03);
+    transform: scale3d(1.03, 1.03, 1.03); }
+  80% {
+    -webkit-transform: scale3d(0.97, 0.97, 0.97);
+    transform: scale3d(0.97, 0.97, 0.97); }
+  to {
+    opacity: 1;
+    -webkit-transform: scale3d(1, 1, 1);
+    transform: scale3d(1, 1, 1); } }
+
+

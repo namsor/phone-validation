@@ -1,0 +1,90 @@
+.list-inline {
+    > li {
+        display: inline-block;
+    }
+}
+.xs-list {
+    > li {
+        &:not(:last-child) {
+            margin-right: 10px;
+        }
+        .title {
+            font-weight: 700;
+        }
+    }
+    &.check ,
+    &.checkbox ,
+    &.arrow ,
+    &.hand {
+        li {
+            &::before {
+                padding-right: 16px;
+                font-family: $iconFont2;
+                color: $color-primary;
+                position: relative;
+                top: 3px;
+                font-size: rem(15px);
+            }
+        }
+    }
+    &.check {
+        li {
+            &::before {
+                content: "\ea73";
+            }
+        }
+    }
+    &.checkbox {
+        li {
+            &::before {
+                content: "\ea74";
+                top: 1px;
+            }
+        }
+    }
+    &.arrow {
+        li {
+            &::before {
+                content: "\e87a";
+            }
+        }
+    }
+    &.hand {
+        li {
+            &::before {
+                content: "\e8a7";
+            }
+        }
+    }
+    &.bullet {
+        li {
+            &::before {
+                content: "";
+                background-color: $color-primary;
+                @include equal-size(5px);
+                display: inline-block;
+                border-radius: 50%;
+                position: relative;
+                top: -3px;
+                margin-right: 10px;
+            }
+        }
+    }
+}
+
+/* list group */
+.list-group {
+    > li {
+        font-size: rem(16px);
+        color: #999999;
+        &:not(:last-child) {
+            margin-bottom: 10px;
+        }
+        strong {
+            float: left;
+            width: 43%;
+            color: #000000;
+            font-weight: 700;
+        }
+    }
+}

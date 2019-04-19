@@ -1,0 +1,73 @@
+.pulse-anim {
+    position: absolute;
+    bottom: -40px;
+    right: -50px;
+    @include equal-size(165px);
+    border-radius: 50%;
+    background-color: #cbdbf7;
+    z-index: -1;
+    // animation: pulseone 3s infinite cubic-bezier(0.4, 0, 1, 1);
+    animation-fill-mode: both;
+    &::before {
+        position: absolute;
+        content: "";
+        top: 0;
+        left: 0;
+        height: 100%;
+        width: 100%;
+        border-radius: 50%;
+        z-index: -1;
+        // animation: pulsetwo 3s infinite cubic-bezier(0.4, 0, 1, 1);
+        box-shadow: 0 0 0 42px #dbe6f9, 0 0 0 84px #ecf2fc;
+        animation-fill-mode: both;
+    }
+}
+
+@keyframes pulseone {
+    0% {
+        box-shadow: 0 0 0 0 rgba($color: $color-primary, $alpha: .08);
+    }
+    70% {
+        box-shadow: 0 0 0 45px rgba($color: $color-primary, $alpha: 0);
+    }
+    100% {
+        box-shadow: 0 0 0 0 rgba($color: $color-primary, $alpha: 0);
+    }
+}
+
+@keyframes pulsetwo {
+    0% {
+        box-shadow: 0 0 0 0 rgba($color: $color-primary, $alpha: .08);
+    }
+    70% {
+        box-shadow: 0 0 0 90px rgba($color: $color-primary, $alpha: 0);
+    }
+    100% {
+        box-shadow: 0 0 0 0 rgba($color: $color-primary, $alpha: 0);
+    }
+}
+
+
+@keyframes pulsethree {
+    0% {
+        box-shadow: 0 0 0 0 rgba($color: #3173E1, $alpha: 1);
+    }
+    70% {
+        box-shadow: 0 0 0 45px rgba($color: #3173E1, $alpha: 0);
+    }
+    100% {
+        box-shadow: 0 0 0 0 rgba($color: #3173E1, $alpha: 0);
+    }
+}
+
+@keyframes pulsefour {
+    0% {
+        box-shadow: 0 0 0 0 rgba($color: #1F67DE, $alpha: 1);
+    }
+    70% {
+        box-shadow: 0 0 0 90px rgba($color: #1F67DE, $alpha: 0);
+    }
+    100% {
+        box-shadow: 0 0 0 0 rgba($color: #1F67DE, $alpha: 0);
+    }
+}

@@ -1,0 +1,116 @@
+.service-info-section {
+    .xs-heading {
+        .section-title {
+            font-size: rem(48px);
+        }
+    }
+}
+
+.service-info-summary {
+    padding-top: 15px;
+    h3 {
+        color: #7a7a7a;
+        font-size: rem(18px);
+        font-weight: 700;
+        margin-bottom: 30px;
+        line-height: 1.555;
+    }
+    p {
+        margin-bottom: 20px;
+    }
+    .xs-list {
+        margin-bottom: 35px;
+        padding-left: 20px;
+        > li {
+            &:not(:last-child) {
+                margin-bottom: 8px;
+            }
+        }
+    }
+}
+
+.service-info-block-area {
+    &.gray-bg {
+        background-color: #f7f9fd;
+    }
+    .xs-heading {
+        .section-title {
+            font-size: rem(28px);
+            font-weight: 400;
+            line-height: 1.42;
+        }
+    }
+    .btn-wraper {
+        .btn {
+            &:not(:last-child) {
+                margin-right: 30px;
+            }
+        }
+    }
+    &.info-block-style-2 {
+        padding: {
+            top: 110px;
+            bottom: 55px;
+        }
+        .service-block-group {
+            margin-bottom: 0px;
+        }
+        .service-info-block {
+            margin-bottom: 55px;
+        }
+    }
+}
+
+.service-block-group {
+    margin-bottom: 50px;
+}
+
+.service-info-block {
+    .info-block-header {
+        margin-bottom: 20px;
+    }
+    .service-info-title {
+        font-size: rem(17.98px);
+        font-weight: 700;
+        margin-bottom: 20px;
+    }
+}
+
+.service-img {
+    margin-bottom: 40px;
+}
+
+
+.service-summary-text {
+    padding-left: 30px;
+    .xs-heading {
+        margin-bottom: 25px;
+        .section-title {
+            font-size: rem(28px);
+            font-weight: 700;
+        }
+    }
+    > p {
+        margin-bottom: 40px;
+        padding-right: 65px;
+    }
+    &.service-summary-2 {
+        padding-left: 0;
+        padding-right: 65px;
+    }
+    .boosting-lists  {
+        margin-bottom: 40px;
+    }
+}
+
+.our-security-section {
+    &.xs-section-padding  {
+        padding-bottom: 80px;
+    }
+}
+
+.boosting-section {
+    &.xs-section-padding  {
+        padding-top: 80px;
+    }
+}

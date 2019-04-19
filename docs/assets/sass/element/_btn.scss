@@ -1,0 +1,69 @@
+$height: 55px;
+.btn {
+    &:not([class*=btn-outline-]) {
+        border: 0px;
+        color: #FFFFFF;
+        background-color: #000000;
+        box-shadow: 0px 10px 10px 0px rgba(0, 0, 0, 0.12);
+    }
+    height: $height;
+    line-height: $height;
+    border-radius: 3px;
+    padding: 0 51px;
+    @include transition;
+    white-space: normal;
+    &.btn-primary {
+        background-color: $color-primary;
+        &:hover {
+            background-color: $color-secondary;
+        }
+    }
+    &.btn-secondary {
+        background-color: $color-secondary;
+        &:hover {
+            background-color: $color-primary;
+        }
+    }
+    &.icon-left {
+        i {
+            padding-right: 9px;
+            float: left;
+            line-height: $height;
+        }
+    }
+    &.icon-right {
+        i {
+            padding-left: 9px;
+            float: right;
+            line-height: $height;
+        }
+    }
+    &.style2 {
+        box-shadow: none;
+        border-radius: 0px;
+    }
+    &.style3 {
+        background-color: $color-white;
+        color: $color-primary;
+        &:hover {
+            background-color: $color-primary;
+            color: $color-white;
+        }
+    }
+    &.btn-info {
+        background-color: $color-white;
+        color: $color-secondary;
+        &:hover {
+            background-color: $color-secondary;
+            color: $color-white;
+        }
+    }
+    &.btn-outline-primary {
+        border-color: $color-primary;
+        color: $color-primary;
+        &:hover {
+            background-color: $color-primary;
+            color: $color-white;
+        }
+    }
+}

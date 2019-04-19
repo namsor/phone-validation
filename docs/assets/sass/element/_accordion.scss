@@ -1,0 +1,47 @@
+.faqAccordion {
+    counter-reset: myCounter;
+    .card {
+        border: 0px;
+        border-radius: 0px;
+        &:not(:last-child) {
+            margin-bottom: 15px;
+        }
+    }
+    .card-header {
+        padding: 0px;
+        border-radius: 0px;
+        background-color: transparent;
+        border-bottom: 0px;
+    }
+    .btn-link {
+        display: block;
+        background-color: $color-white;
+        font-size: rem(16px);
+        font-weight: 700;
+        color: $color-black;
+        text-decoration: none;
+        padding: 17px 40px;
+        box-shadow: 0px 7px 25px 0px rgba(0, 0, 0, 0.1);
+        position: relative;
+        &::before {
+            content: counter(myCounter)'.';
+            counter-increment: myCounter;
+        }
+        &::after {
+            content: "\e991";
+            font-family: $iconFont2;
+            font-size: rem(14px);
+            float: right;
+            transform: rotateX(0deg);
+            @include transition;
+        }
+        &[aria-expanded="true"] {
+            &::after {
+                transform: rotateX(-180deg);
+            }
+        }
+    }
+    .card-body {
+        padding: 40px;
+    }
+}

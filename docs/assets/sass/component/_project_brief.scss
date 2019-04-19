@@ -1,0 +1,28 @@
+.project-brief-area {
+    position: relative;
+    .doodle-parallax {
+        img {
+            position: absolute;
+            right: -110px;
+            bottom: -80px;
+            opacity: .3;
+        }
+    }
+}
+.project-brief-content {
+    margin-bottom: 50px;
+    .brief-title {
+        font-size: rem(30px);
+        font-weight: 700;
+        margin-bottom: 30px;
+    }
+    p {
+        &:not(:last-child) {
+            margin-bottom: 30px;
+        }
+    }
+}
+.project-brief-wraper {
+    padding-bottom: 100px;
+    border-bottom: 1px solid #f5f5f5;
+}

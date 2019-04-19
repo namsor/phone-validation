@@ -1,0 +1,146 @@
+.xs-banner {
+    .single-banner-slide {
+        @include background-content();
+        min-height: 850px;
+        position: relative;
+        display: flex;
+        align-items: center;
+    }
+    &.banner-v2 {
+        .single-banner-slide {
+            background-color: $color-white;
+            min-height: 650px;
+            background-size: contain;
+            background-position: bottom center;
+            align-items: baseline;
+        }
+    }
+}
+
+.single-banner-slide {
+    &.slide-two {
+        .xs-banner-content {
+            padding-left: 25px;
+        }
+    }
+}
+
+.xs-banner-content {
+    .banner-subtitle {
+        color: $color-white;
+        font-size: rem(24px);
+        font-weight: 300;
+        margin-bottom: 8px;
+    }
+    .banner-title {
+        margin-bottom: 36px;
+    }
+    p {
+        margin-bottom: 35px;
+        color: $color-white;
+    }
+    .btn {
+        &:not([class*=btn-outline-]) {
+            box-shadow: none;
+        }
+    }
+    &.banner-content-v2 {
+        margin-top: 70px;
+        .banner-subtitle {
+            color: $color-primary;
+            font-size: rem(18px);
+            font-weight: 700;
+            margin-bottom: 10px;
+        }
+        .banner-title {
+            color: $color-black;
+            font-size: rem(48px);
+            margin-bottom: 12px;
+            span {
+                color: $color-primary;
+            }
+        }
+        p {
+            color: $bColor;
+            margin-bottom: 22px;
+        }
+        .btn {
+            &:not([class*=btn-outline-]) {
+                box-shadow: 0px 10px 10px 0px rgba(0, 0, 0, 0.12);
+            }
+        }
+    }
+}
+.banner-image {
+    &.image-one {
+        margin-right: -130px;
+        margin-left: -30px;
+    }
+    &.image-two {
+        margin-left: -65px;
+    }
+    &.image-three {
+        margin-right: -100px;
+    }
+}
+
+.banner-slider {
+    .active {
+        .banner-title , .banner-image, .banner-subtitle , .banner-title , .xs-banner-content p, .btn-wraper a {
+            animation-fill-mode: both;
+            animation-duration: 1s;
+            backface-visibility: hidden;
+        }
+        .banner-image {
+            &.image-one,
+            &.image-three {
+                animation-name: fadeInRight;
+            }
+            &.image-two {
+                animation-name: fadeInLeft;
+            }
+        }
+        .xs-banner-content {
+            .banner-subtitle {
+                animation-name: fadeInLeft;
+                animation-delay: .3s;
+            }
+            .banner-title {
+                animation-name: fadeInLeft;
+                animation-delay: .6s;
+            }
+            p {
+                animation-name: fadeInLeft;
+                animation-delay: .9s;
+            }
+            .btn-wraper {
+                a {
+                    animation-name: fadeInLeft;
+                    animation-delay: 1.2s;
+                }
+            }
+        }
+    }
+}
+@keyframes fadeInRight {
+    from {
+        opacity: 0;
+        transform: translate3d(100px, 0, 0);
+    }
+
+    to {
+        opacity: 1;
+        transform: none;
+    }
+}
+@keyframes fadeInLeft {
+    from {
+        opacity: 0;
+        transform: translate3d(-100px, 0, 0);
+    }
+
+    to {
+        opacity: 1;
+        transform: none;
+    }
+}

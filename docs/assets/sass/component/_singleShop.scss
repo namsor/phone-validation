@@ -1,0 +1,115 @@
+$space: 60px;
+.product-summary {
+    padding-top: $space;
+    padding-left: $space / 2;
+    padding-right: $space / 2;
+    .product_title {
+        font-size: rem(18px);
+        font-weight: 500;
+        font-family: $bodyFont;
+        margin-bottom: 20px;
+    }
+    .product_meta {
+        font-size: rem(15px);
+        &:not(:last-child) {
+            margin-bottom: 10px;
+        }
+        strong {
+            color: $color-black;
+            font-weight: 500;
+            padding-right: 10px;
+        }
+        a {
+            color: #aaaaaa;
+            &:hover {
+                color: $color-primary;
+            }
+            &:not(:last-child) {
+                padding-right: 5px;
+                &:after {
+                    content: ",";
+                    padding-left: 2px;
+                }
+            }
+        }
+    }
+    .woocommerce-product-details__short-description {
+        p {
+            font-size: rem(15px);
+        }
+    }
+    .product-meta-group ,
+    .woocommerce-product-details__short-description ,
+    .price {
+        margin-bottom: 30px;
+    }
+    .price {
+        font-size: rem(28px);
+        display: block;
+        ins {
+            color: $color-black;
+        }
+    }
+    .custom-number-wraper {
+        margin-bottom: 40px;
+    }
+}
+
+.product-cart-info-list {
+    > li {
+        position: relative;
+        .btn {
+            padding: 0 30px;
+            @include height-lh(45px);
+            &[class*="icon"] {
+                i {
+                    line-height: 45px;
+                }
+            }
+        }
+    }
+}
+
+.product-cart-info-list {
+    &.list-inline {
+        > li {
+            &:not(:last-child) {
+                margin-right: 15px;
+            }
+        }
+    }
+}
+
+.related-products-area {
+    &.xs-section-padding {
+        padding-bottom: 40px;
+    }
+    .content-holder {
+        margin-bottom: 60px;
+        .section-title {
+            font-size: rem(28px);
+            font-weight: 700;
+            margin-bottom: 0px;
+        }
+    }
+}
+
+.single-product-slider {
+    .product-header {
+        border-radius: 0px;
+        &:before {
+            display: none;
+        }
+    }
+}
+
+.product-slider {
+    position: relative;
+    .owl-dots {
+        position: absolute;
+        bottom: 30px;
+        left: 0;
+        width: 100%;
+        text-align: center;
+    }
+}

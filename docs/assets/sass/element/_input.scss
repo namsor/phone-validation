@@ -1,0 +1,29 @@
+.xs-from {
+    .form-control {
+        border: 1px solid #e7e7e7;
+        background-color: $color-white;
+        height: 52px;
+        border-radius: 0px;
+        @include transition;
+        padding: 0 30px;
+        &:focus {
+            border-color: $color-primary;
+        }
+        &.invaild {
+            border-color: lighten($color: red, $amount: 12);
+        }
+    }
+    input[type=number]::-webkit-inner-spin-button, 
+    input[type=number]::-webkit-outer-spin-button { 
+        -webkit-appearance: none; 
+        margin: 0; 
+    }
+    textarea.form-control {
+        padding: 15px 30px;
+        height: 134px;
+        resize: none;
+    }
+    .form-group {
+        margin-bottom: 30px;
+    }
+}

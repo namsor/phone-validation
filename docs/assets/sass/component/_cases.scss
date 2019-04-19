@@ -1,0 +1,130 @@
+.agency-filter-wraper {
+    margin-bottom: 37px;
+}
+
+.main-filter {
+    li {
+        display: inline-block;
+        &:not(:last-child) {
+            margin-right: 50px;
+        }
+        a {
+            display: block;
+            font-size: rem(18px);
+            color: #666666;
+            font-weight: 700;
+            position: relative;
+            @include transition;
+            padding-bottom: 8px;
+            &::before {
+                position: absolute;
+                content: "";
+                left: 0;
+                bottom: -1px;
+                width: calc(100% + 16px);
+                background-color: $color-primary;
+                height: 1px;
+                transform: scale(0, 1);
+                transform-origin: center left;
+                @include transition;
+            }
+            &:hover ,
+            &.selected {
+                color: $color-primary;
+                &::before {
+                    transform: scale(1,1);
+                }
+            }
+        }
+    }
+}
+
+.cases-grid {
+    margin-left: -15px;
+    margin-right: -15px;
+}
+
+.single-cases-card  {
+    text-align: center;
+    margin: 15px;
+    border: 1px solid rgb(245, 245, 245);
+    box-shadow: 0px 3px 10px 0px rgba(0, 0, 0, 0.05);
+    @include transition;
+    background-color: $color-white;
+    .cases-content {
+        padding: 24px 10px;
+        .xs-title {
+            margin-bottom: 10px;
+            font-size: rem(22px);
+            font-weight: 700;
+            a {
+                color: $color-black;
+                @include transition;
+            }
+        }
+        .tag {
+            color: #b2b2b2;
+            font-size: rem(14px);
+            &::before {
+                content: "";
+                border-radius: 100%;
+                background-color: #b2b2b2;
+                @include equal-size(6px);
+                display: inline-block;
+                margin-right: 7px;
+                margin-bottom: 1px;
+            }
+        }
+    }
+    &:hover {
+        box-shadow: 0px 7px 30px 0px rgba($color: $color-black, $alpha: .1);
+        .hover-area {
+            opacity: 1;
+            top: 50%;
+        }
+        .card-image {
+            &::before {
+                opacity: 1;
+            }
+        }
+        .cases-content {
+            .xs-title {
+                a {
+                    color: $color-primary;
+                }
+            }
+        }
+    }
+    .card-image {
+        position: relative;
+        z-index: 1;
+        @include transition;
+        &::before {
+            position: absolute;
+            content: "";
+            top: 0;
+            left: 0;
+            height: 100%;
+            width: 100%;
+            background-color: rgba($color: $color-black, $alpha: .5);
+            opacity: 0;
+            @include transition;
+        }
+    }
+    .hover-area {
+        position: absolute;
+        top: 60%;
+        left: 50%;
+        transform: translate(-50%, -50%);
+        z-index: 1;
+        @include transition;
+        opacity: 0;
+        a {
+            display: block;
+            border-radius: 50%;
+            text-align: center;
+            color: #f9fafe;
+            font-size: rem(48px);
+        }
+    }
+}

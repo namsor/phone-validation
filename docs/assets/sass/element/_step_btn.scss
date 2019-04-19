@@ -1,0 +1,12 @@
+.next-step {
+    font-size: rem(25px);
+    color: $color-primary;
+    border: 2px solid currentColor;
+    text-align: center;
+    @include equal-size-lineHeight(60px);
+    display: inline-block;
+    border-radius: 100%;
+    &:hover {
+        color: $color-secondary;
+    }
+}

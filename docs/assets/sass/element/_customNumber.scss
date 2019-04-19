@@ -1,0 +1,46 @@
+.custom_number {
+	position: relative;
+	height: 49px;
+	user-select: none;
+	margin: 0 auto;
+	float: right;
+	border: 1px solid #f5f5f5;
+	border-radius: 5px;
+	.sub,
+	.add {
+		float: right;
+		cursor: pointer;
+		transition: all .4s ease;
+		color: #777777;
+		font-size: rem(12px);
+		padding: 5px 14px;
+	}
+	.sub {
+		position: absolute;
+		bottom: 0;
+		right: 0;
+	}
+	input[type="number"] {
+		height: 100%;
+		width: auto;
+		background-color: $color-white;
+		text-align: center;
+		pointer-events: none;
+		width: 62px;
+		color: $color-black;
+		border: 0px;
+		border-right: 1px solid #f5f5f5;
+	}
+}
+
+.custom-number-wraper {
+	display: inline-block;
+	.title {
+		color: $color-black;
+		font-weight: 500;
+		font-size: rem(15px);
+		display: inline-block;
+		padding-right: 15px;
+		margin-top: 11px;
+	}
+}

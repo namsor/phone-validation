@@ -1,0 +1,34 @@
+.boosting-lists {
+    counter-reset: my-counter;
+}
+
+.boosting-list {
+    position: relative;
+    padding-left: 48px;
+    &:not(:last-child) {
+        margin-bottom: 50px;
+    }
+    p {
+        a {
+            color: $color-primary;
+            text-decoration: underline;
+            &:hover {
+                color: $color-secondary;
+            }
+        }
+    }
+    .count-number {
+        font-size: rem(90px);
+        font-weight: 700;
+        font-family: $titleFont;
+        line-height: 1;
+        color: rgba($color: $color-black, $alpha: .07);
+        position: absolute;
+        top: -25px;
+        left: 0;
+        &::before {
+            counter-increment: my-counter;
+            content: '0' counter(my-counter)
+        }
+    }
+}

@@ -1,0 +1,16 @@
+.content-404 {
+    margin-bottom: 40px;
+    .title-404 {
+        font-size: rem(36px);
+        font-weight: 700;
+        margin-bottom: 20px;
+        span {
+            color: $color-primary;
+        }
+    }
+    p {
+        margin-bottom: 25px;
+        color: #919191;
+        font-size: rem(18px);
+    }
+}

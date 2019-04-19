@@ -1,0 +1,20 @@
+blockquote {
+    background-color: #f7f7f7;
+    padding: 40px;
+    &::before {
+        content: '\e939';
+        font-family: $iconFont2;
+        font-size: rem(90px);
+        color: $color-primary;
+        float: left;
+        line-height: 1;
+        margin-top: -6px;
+    }
+    > p {
+        // color: rgba($color: $color-black, $alpha: .7);
+        color: #5d5d5d;
+        font-weight: 700;
+        font-style: italic;
+        padding-left: 117px;
+    }
+}

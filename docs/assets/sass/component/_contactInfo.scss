@@ -1,0 +1,29 @@
+.single-contact-info {
+    text-align: center;
+    .round-icon {
+        margin-bottom: 24px;
+    }
+}
+.round-icon {
+    text-align: center;
+    @include equal-size-lineHeight(80px, $Lheight: 87px);
+    box-shadow: 0px 3px 10px 0px rgba(0, 0, 0, 0.05);
+    background-color: $color-white;
+    border-radius: 50%;
+    margin: 0 auto;
+    i {
+        font-size: rem(25px);
+        color: $color-primary;
+    }
+}
+
+.info-content {
+    display: block;
+    color: #7a7a7a;
+    &:hover {
+        color: $color-primary;
+    }
+}
+.contact-info-wraper {
+    padding: 0 46px;
+}

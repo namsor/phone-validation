@@ -1,0 +1,27 @@
+.product-slider {
+    .owl-dots {
+        .owl-dot {
+            &:not(:last-child) {
+                margin-right: 12px;
+            }
+            span {
+                background-color: rgba($color: $color-black, $alpha: 0.149);
+                transform-origin: center center;
+                transform: scale(1);
+                @include equal-size(8px);
+                display: block;
+                border-radius: 50%;
+                @include transition;
+                &::before {
+                    display: none;
+                }
+            }
+            &.active {
+                span {
+                    background-color: rgba($color: $color-black, $alpha: .5);
+                    transform: scale(1.9);
+                }
+            }
+        }
+    }
+}
