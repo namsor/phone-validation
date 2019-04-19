@@ -6,7 +6,6 @@ import { AppComponent } from './app.component';
 import { HomeComponent } from './home/home.component';
 import { HeaderComponent } from './header/header.component';
 import { FooterComponent } from './footer/footer.component';
-import { DocumentationComponent } from './documentation/documentation.component';
 import { VerifyService } from './service/verify.service';
 import { HttpClientModule } from '@angular/common/http';
 import { CommonModule } from '@angular/common';
@@ -17,8 +16,7 @@ import { FormsModule, ReactiveFormsModule } from '@angular/forms';
     AppComponent,
     HomeComponent,
     HeaderComponent,
-    FooterComponent,
-    DocumentationComponent
+    FooterComponent
   ],
   imports: [
     BrowserModule,
