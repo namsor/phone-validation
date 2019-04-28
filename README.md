@@ -1,6 +1,6 @@
 
 # NamSor phone validation API
-A free API for global phone number validation based on personal name and phone number formatting.
+A free API for global phone number validation based on personal name and phone number formatting. FYI, this is a full AngularJS 6 project, hosted using Github Pages at https://namsor.github.io/phone-validation/ with a HTTPS custom domain. The website uses NamSor API v2. 
 
 <h3>Getting started</h3>
 
