@@ -42,7 +42,7 @@ Will get you this JSON response :
 }
 ```
 
-The main output is <b>internationalPhoneNumberVerified</b>, if the number could be verified using Google's validation API. 
+The main output is <b>internationalPhoneNumberVerified</b>, if the number could be verified using Google's validation API. Once you have this information, you can use additional APIs to enrich your customer information (ex. NumVerify https://numverify.com, Twilio https://www.twilio.com/lookup etc.)
 
 <h3>Using from AngularJS or JQuery </h3>
 
