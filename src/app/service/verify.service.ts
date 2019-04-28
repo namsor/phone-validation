@@ -27,4 +27,8 @@ httpOptions = {
   
       return this.http.get(`${this.urls.get+'/'+data.fname+'/'+data.lname+'/'+data.number}`, this.httpOptions);
   }
+
+  getCountry(code) {
+    return this.http.get('https://restcountries.eu/rest/v2/alpha/'+code);
+  }
 }

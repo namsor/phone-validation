@@ -3,7 +3,7 @@
   "version": 1,
   "newProjectRoot": "projects",
   "projects": {
-    "namson": {
+    "namsor": {
       "root": "",
       "sourceRoot": "src",
       "projectType": "application",
@@ -13,7 +13,7 @@
         "build": {
           "builder": "@angular-devkit/build-angular:browser",
           "options": {
-            "outputPath": "dist/namson",
+            "outputPath": "dist/namsor",
             "index": "src/index.html",
             "main": "src/main.ts",
             "polyfills": "src/polyfills.ts",
@@ -58,18 +58,18 @@
         "serve": {
           "builder": "@angular-devkit/build-angular:dev-server",
           "options": {
-            "browserTarget": "namson:build"
+            "browserTarget": "namsor:build"
           },
           "configurations": {
             "production": {
-              "browserTarget": "namson:build:production"
+              "browserTarget": "namsor:build:production"
             }
           }
         },
         "extract-i18n": {
           "builder": "@angular-devkit/build-angular:extract-i18n",
           "options": {
-            "browserTarget": "namson:build"
+            "browserTarget": "namsor:build"
           }
         },
         "test": {
@@ -103,7 +103,7 @@
         }
       }
     },
-    "namson-e2e": {
+    "namsor-e2e": {
       "root": "e2e/",
       "projectType": "application",
       "prefix": "",
@@ -112,11 +112,11 @@
           "builder": "@angular-devkit/build-angular:protractor",
           "options": {
             "protractorConfig": "e2e/protractor.conf.js",
-            "devServerTarget": "namson:serve"
+            "devServerTarget": "namsor:serve"
           },
           "configurations": {
             "production": {
-              "devServerTarget": "namson:serve:production"
+              "devServerTarget": "namsor:serve:production"
             }
           }
         },
@@ -132,5 +132,5 @@
       }
     }
   },
-  "defaultProject": "namson"
+  "defaultProject": "namsor"
 }

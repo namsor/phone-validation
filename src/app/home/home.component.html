@@ -41,7 +41,7 @@
                 </span><br>
                 <span [ngClass]="{'hidden':pro}" style="color: white; margin-top: 5px;">
 					<h1>
-                        {{resdata?.phoneCountryIso2 || ""}}&nbsp; : &nbsp;{{resdata?.internationalPhoneNumberVerified || ""}}
+                            <img src={{flagImg}} style="height: 50px;"/>&nbsp; : &nbsp;{{resdata?.internationalPhoneNumberVerified || ""}}
 					</h1>
                 </span>
                 <div class="typography-group">
