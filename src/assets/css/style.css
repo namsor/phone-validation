@@ -1885,7 +1885,6 @@ button:focus {
 ==============================================================*/
 .xs-footer-section {
   background-color: #042355;
-  background-image: url(../images/footer-overlay-bg.png);
   background-repeat: no-repeat;
   background-size: 100% 40%;
   background-position: top 40px center; }
